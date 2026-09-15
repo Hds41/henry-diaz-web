@@ -1,0 +1,850 @@
+<style>
+
+body {
+    background-color: #111111;
+    color: white;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 60px 30px;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+  
+h2 {
+    color: #00A8FF;
+    
+}
+
+.mi-cocina-titulo {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}  
+
+.mi-cocina-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.mi-cocina-lista li {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}  
+
+.galeria-titulo {
+    color: #00A8FF;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.galeria-titulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00A8FF;
+    margin: 18px auto 0;
+}
+
+.presentacion {
+    background: trnsparente;
+    color: white;
+    padding: 40px 30px;
+    margin: 80px 0;
+    text-align: center;
+} 
+
+.presentacion h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 30px;
+}  
+
+h3 {
+    color: #cccccc;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+  img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .galeria-ajustada {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 80px;
+  }
+
+ .creator-photo {
+    position: relative;
+    display: inline-block;
+    max-width: 110%;
+    margin-bottom: 30px;
+}
+
+.creator-photo img {
+    display: block;
+    width: 105%;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.creator-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 105%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.58);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+.creator-overlay h2 {
+    color: #00A8FF;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.creator-overlay p {
+margin: 0 0 30px 0;
+color:
+white;font-size:30px;
+font-style: italic;
+}  
+
+.conocer-btn {
+    display: inline-block;
+    background: #00A8FF;
+    color: white;
+    text-decoration: none;
+    padding: 18px 36px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.35)
+}
+
+.conocer-btn:hover {
+    background: #0088CC;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.social-buttons a {
+    background: white;
+    color: #222;
+    text-decoration: none;
+
+    padding: 10px 17px;
+    border-radius: 4px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+  
+.foto-portada {
+   width: 105%;
+   display: block;
+   margin: 0 auto 50px auto;
+   border-radius: 15px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.social-buttons a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 10px 18px;
+    border: 1px solid white;
+    border-radius: 25px;
+    display: inline-block;
+}
+  
+.social-buttons a {
+    color: white !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin: 0 10px;
+    padding: 10px 18px;
+    border: 1px solid white;
+    border-radius: 25px;
+    display: inline-block !important;
+}  
+
+.social-buttons a:hover {
+    color: #00A8FF !important;
+    border-color: #00A8FF;
+}
+
+.carrusel-fotos {
+    width: 100%;
+    overflow: hidden;
+    margin: 60px 0 80px;
+}
+
+.carrusel-track {
+    display: flex;
+    gap: 35px;
+    width: max-content;
+    animation: moverCarrusel 20s
+  linear infinite;
+}
+
+.carrusel-track img {
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0;
+    opacity: 1;
+transform: none;
+transition: none;
+    box-shadow: 0 8px 25px rgba(0, 168, 255, 0.25);
+border: 2px solid rgba(255,255,255,0.15);
+}
+
+@keyframes moverCarrusel {
+    from {
+        transform: translateX(0);
+    }
+    to {
+transform: translateX(-1370px);
+    }
+}
+
+.frase-impacto {
+    background: #0066cc;
+    text-align: center;
+    padding: 15px 20px;
+    margin: 80px 0;
+    border-radius: 12px;
+}
+
+.frase-impacto h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.frase-impacto p {
+    color: white;
+    font-size: 22px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.experiencias {
+    margin: 100px 0;
+    padding: 50px 30px;
+    text-align: center;
+    border: 1px solid #00A8FF;
+    border-radius: 12px;
+}
+
+.experiencias h2 {
+    color: #00A8FF;
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.experiencias h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00A8FF;
+    margin: 18px auto 0;
+}
+
+.experiencia-item {
+    margin: 0 auto 15px;
+    padding: 4px 30px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    max-width: 750px;
+}
+
+.experiencia-negra {
+    background: white;
+}
+
+.experiencia-negra h3 {
+    color: #00A8FF;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.experiencia-negra p {
+    color: #00A8FF;
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.experiencia-blanca {
+    background: white;
+}
+
+.experiencia-blanca h3 {
+    color: #00A8FF;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.experiencia-negra p,
+.experiencia-blanca p {
+    color: #00A8FF;
+    font-size: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.video-presentacion {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.video-presentacion video {
+    width: 220%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* LUZ INTELIGENTE */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    transform: translateX(-50%);
+    background: radial-gradient(
+        circle,
+        rgba(255, 180, 80, 0.10) 0%,
+        rgba(255, 140, 50, 0.05) 35%,
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 9999;
+    animation: luzFlotante 8s ease-in-out infinite;
+}
+
+@keyframes luzFlotante {
+    0% {
+        transform: translateX(-50%) translateY(-100px);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(100px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-100px);
+        opacity: 0.5;
+    }
+}
+
+  
+  .texto-arriba,
+.texto-izquierda,
+.texto-derecha,
+.texto-abajo {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.texto-arriba {
+    transform: translateY(-50px);
+}
+
+.texto-izquierda {
+    transform: translateX(-60px);
+}
+
+.texto-derecha {
+    transform: translateX(60px);
+}
+
+.texto-abajo {
+    transform: translateY(50px);
+}
+
+.texto-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* EXPERIENCIAS — CRISTAL AZUL */
+
+.experiencias {
+    position: relative;
+    overflow: hidden;
+    background: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+/* BLOQUE EXPERIENCIAS - AZUL */
+.experiencias {
+    background: #0066CC;
+    border: 1px solid #0066cc;
+}
+
+.experiencias h2 {
+    color: white;
+}
+
+.experiencias h2::after {
+    background: white;
+}
+
+.idiomas {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.idiomas button {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 5px 9px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.contacto-iconos {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.contacto-iconos a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+
+
+  
+</style>
+
+<div class="idiomas">
+    <button onclick="cambiarIdioma('pt')">🇧🇷 PT</button>
+    <button onclick="cambiarIdioma('es')">🇪🇸 ES</button>
+</div>
+
+<h1 class="texto-arriba">Henry Díaz</h1>
+<h2 class="texto-arriba">Chef peruano</h2>
+<h3 class="texto-arriba" data-es="Cocina peruana, Nikkei & asiática" data-pt="Cozinha peruana, Nikkei & asiática">Cocina peruana, Nikkei & asiática</h3>
+
+<div class="carrusel-fotos">
+
+    <div class="carrusel-track">
+
+        <img src="niguiri-nikkei.png" alt="Niguiri Nikkei">
+        <img src="tiradito-nikkei.jpg" alt="Tiradito Nikkei">
+        <img src="sushi-roll.png" alt="Sushi Roll">
+        <img src="arroz-chaufa.jpg" alt="Arroz Chaufa">
+        <img src="arroz-mariscos.jpg" alt="Arroz con mariscos">
+
+        <img src="niguiri-nikkei.png" alt="Niguiri Nikkei">
+        <img src="tiradito-nikkei.jpg" alt="Tiradito Nikkei">
+        <img src="sushi-roll.png" alt="Sushi Roll">
+        <img src="arroz-chaufa.jpg" alt="Arroz Chaufa">
+        <img src="arroz-mariscos.jpg" alt="Arroz con mariscos">
+
+    </div>
+
+</div>
+
+<img src="Foto 1.jpg" alt="Henry Díaz"
+
+class="foto-portada">
+
+<div class="creator-photo">
+    <img src="yo finalizando.jpg" alt="Henry Díaz finalizando un plato">
+
+    <div class="creator-overlay texto-abajo">
+        <h2>ART &amp; Creator</h2>
+        <p>Una historia hecha de creatividad.</p>
+
+        <a href="#henry-diaz" class="conocer-btn">CONOCER MÁS</a> 
+          
+ <div class="social-buttons">
+
+<a href="https://www.instagram.com/genrids/" target="_blank">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="2"/>
+<circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/>
+<circle cx="17.5" cy="6.5" r="1" fill="white"/>
+</svg>
+Instagram
+</a>
+
+<a href="https://www.tiktok.com/@08rabbit" target="_blank">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 3C16.8 5.1 18 6.4 20 6.6V10c-1.7-.1-3.1-.6-4.3-1.5v6.7c0 4-2.8 6.8-6.7 6.8-3.3 0-5.7-2.3-5.7-5.4 0-3.4 2.8-5.8 6.5-5.8.3 0 .6 0 .9.1v3.4c-.3-.1-.6-.2-.9-.2-1.5 0-2.6 1-2.6 2.4 0 1.3 1 2.2 2.3 2.2 1.6 0 2.8-1.1 2.8-3.5V3h4.2z"/>
+</svg>
+TikTok
+</a>
+
+ </div>
+      
+        </>
+    </div>
+</div>
+
+<div class="presentacion" id="henry-diaz"
+style="padding-top:80px;"></div>
+<div class="texto-abajo">
+<h2>Henry Díaz</h2>
+
+
+<p>
+Soy Henry Díaz. Nací y crecí en Perú, y la cocina se convirtió en una de las formas más importantes de expresar mi creatividad.
+</p>
+
+<p>
+Mi recorrido profesional comenzó en otros caminos, pero fue entre el ritmo intenso de los servicios, la energía de una cocina profesional y el deseo constante de aprender donde descubrí una pasión que transformó mi vida. Allí encontré un espacio donde la creatividad, la disciplina y la emoción se encuentran cada día.
+</p>
+
+<p>
+Mi formación en Le Cordon Bleu Perú y las experiencias que he vivido a lo largo de los años han enriquecido mi manera de entender la gastronomía y la atención por los detalles.
+</p>
+
+<p>
+Hoy continúo desarrollando una cocina influenciada por las tradiciones peruanas, nikkei y asiáticas, buscando siempre equilibrio, técnica y personalidad en cada plato.
+</p>
+
+<p>
+Pero la gastronomía no es mi único interés. También me apasiona explorar nuevas ideas, aprender constantemente y descubrir nuevas formas de crear. Me interesa cómo la tecnología puede ayudarnos a desarrollar proyectos, compartir conocimiento y conectar con más personas. Creo que la innovación y la cocina tienen algo en común: ambas nacen de la curiosidad, la creatividad y el deseo de construir algo con propósito.
+</p>
+
+</div>
+
+<div class="texto-derecha">
+  
+<h2 class="mi-cocina-titulo">Mi cocina</h2>
+
+<ul class="mi-cocina-lista">
+  <li>Cocina peruana contemporánea</li>
+  <li>Cocina Nikkei</li>
+  <li>Cocina asiática</li>
+  <li>Ceviches y tiraditos</li>
+  <li>Experiencias gastronómicas privadas</li>
+</ul>
+</div>
+
+
+<div class="frase-impacto texto-izquierda">
+
+<h2>Cada plato cuenta una historia</h2>
+
+<p>
+Mi trabajo es hacer que sea memorable.
+</p>
+</div>
+
+
+
+<div class="experiencias">
+
+<h2>Experiencias gastronómicas</h2>
+
+<div class="experiencia-item experiencia-negra experiencia-1 texto-abajo">
+    <h3>Chef privado</h3>
+    <p>Una experiencia gastronómica personalizada, creada para cada ocasión.</p>
+</div>
+
+
+
+<div class="experiencia-item experiencia-blanca experiencia-2 texto-abajo">
+    <h3>Cocina peruana & Nikkei</h3>
+    <p>Sabores, técnica y creatividad inspirados en Perú y Asia.</p>
+</div>
+
+<div class="experiencia-item experiencia-negra experiencia-3 texto-abajo">
+    <h3>Experiencias</h3>
+    <p>Una propuesta gastronómica diseñada para convertir cada encuentro en una experiencia.</p>
+</div>
+
+</div>
+
+<div class="video-presentacion">
+    <video autoplay muted loop playsinline>
+        <source src="fuegov.mp4" type="video/mp4">
+    </video>
+</div>
+
+<h2 class="galeria-titulo">Galería</h2>
+
+<img src="niguiri-nikkei.png" alt="Niguiri Nikkei" width="100%">
+
+<img src="sushi-roll.png" alt="Sushi Roll" width="100%">
+
+<img src="causa.jpg" alt="causa peruana" width="100%">
+
+<img src="arroz-mariscos.jpg" alt="Arroz con Mariscos" width="100%">
+
+<img src="arroz-chaufa.jpg" class="galeria-ajustada">
+
+<img src="tiradito-nikkei.jpg" class="galeria-ajustada">
+
+<p>
+Una selección de platos y creaciones que reflejan mi forma de entender la gastronomía: equilibrio, creatividad y atención a los detalles.
+</p>
+
+<h2>Contacto</h2>
+
+<p>
+Si deseas colaborar, contratar mis servicios o conocer más sobre mi trabajo, estaré encantado de conversar contigo.
+</p>
+
+<hr>
+<p>Henry Díaz • Chef peruano</p>
+
+<p>Balneário Camboriú, Brasil</p>
+
+<div class="contacto-iconos">
+
+    <a href="https://www.instagram.com/genrids/" target="_blank" aria-label="Instagram">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="2"/>
+    <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/>
+    <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+        </svg>
+    </a>
+
+    <a href="https://www.tiktok.com/@08rabbit" target="_blank" aria-label="TikTok">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M16.5 3C16.8 5.1 18 6.4 20 6.6V10c-1.7-.1-3.1-.6-4.3-1.5v6.7c0 4-2.8 6.8-6.7 6.8S2.3 19.5 2.3 15.8c0-3.7 2.8-6.5 6.5-6.5.5 0 1 .1 1.5.2v3.5c-.4-.1-.8-.2-1.3-.2-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7c1.5 0 2.7-1.1 2.7-2.8V3h4.8z" fill="white"/>
+        </svg>
+    </a>
+
+    <a href="https://api.whatsapp.com/send?phone=5547997886548&text=Hola%20Henry,%20vi%20tu%20WhatsApp" target="_blank" aria-label="WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/>
+    <path d="M8.5 7.8c.4-.4 1-.4 1.3 0l1 1.5c.3.4.2.9-.1 1.2l-.7.6c.6 1.2 1.5 2.1 2.7 2.7l.6-.7c.3-.3.8-.4 1.2-.1l1.5 1c.4.3.4.9 0 1.3l-.5.5c-.5.5-1.2.7-1.9.5-3.1-.9-5.5-3.3-6.4-6.4-.2-.7 0-1.4.5-1.9l.5-.5z" fill="white"/>
+        </svg>
+    </a>
+
+
+
+<script>
+const elementos = document.querySelectorAll(
+    'img, .texto-arriba, .texto-izquierda, .texto-derecha, .texto-abajo, .experiencia-item'
+);
+
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+
+            if (entrada.target.tagName === "IMG") {
+                entrada.target.style.opacity = "1";
+                entrada.target.style.transform = "translateY(0)";
+            } else {
+                entrada.target.classList.add("texto-visible");
+            }
+
+            observador.unobserve(entrada.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+elementos.forEach((elemento) => {
+    observador.observe(elemento);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const idioma = localStorage.getItem("idioma") ||
+    (navigator.language.startsWith("pt") ? "pt" : "es");
+
+console.log("Idioma detectado:", idioma);
+document.querySelectorAll(".idiomas button").forEach(function(boton) {
+    boton.addEventListener("click", function() {
+        localStorage.setItem("idioma", this.textContent.includes("PT") ? "pt" : "es");
+        location.reload();
+    });
+});
+const textos = document.querySelectorAll("h3.texto-arriba");
+
+if (idioma === "pt") {
+    textos.forEach(function(texto) {
+        if (texto.textContent.includes("Cocina peruana")) {
+            texto.textContent = "Cozinha peruana, Nikkei & asiática";
+        }
+    });
+ const creator = document.querySelector(".creator-overlay");
+
+if (creator && idioma === "pt") {
+    creator.querySelector("p").textContent = "Uma história feita de criatividade.";
+    creator.querySelector(".conocer-btn").textContent = "CONHECER MAIS";
+} 
+const presentacionTextos = document.querySelectorAll(".presentacion + .texto-abajo p");
+
+if (idioma === "pt") {
+    const traduccionesPresentacion = [
+        "Sou Henry Díaz. Nasci e cresci no Peru, e a cozinha se tornou uma das formas mais importantes de expressar minha criatividade.",
+        "Minha trajetória profissional começou por outros caminhos, mas foi entre o ritmo intenso dos serviços, a energia de uma cozinha profissional e o desejo constante de aprender que descobri uma paixão que transformou minha vida. Ali encontrei um espaço onde a criatividade, a disciplina e a emoção se encontram todos os dias.",
+        "Minha formação no Le Cordon Bleu Peru e as experiências que vivi ao longo dos anos enriqueceram minha maneira de compreender a gastronomia e a atenção aos detalhes.",
+        "Hoje continuo desenvolvendo uma cozinha influenciada pelas tradições peruanas, nikkei e asiáticas, buscando sempre equilíbrio, técnica e personalidade em cada prato.",
+        "Mas a gastronomia não é meu único interesse. Também me apaixona explorar novas ideias, aprender constantemente e descobrir novas formas de criar. Tenho interesse em como a tecnologia pode nos ajudar a desenvolver projetos, compartilhar conhecimento e conectar-nos com mais pessoas. Acredito que a inovação e a cozinha têm algo em comum: ambas nascem da curiosidade, da criatividade e do desejo de construir algo com propósito."
+    ];
+
+    presentacionTextos.forEach(function(parrafo, indice) {
+        if (traduccionesPresentacion[indice]) {
+            parrafo.textContent = traduccionesPresentacion[indice];
+        }
+    });
+}
+const miCocina = document.querySelector(".mi-cocina-titulo");
+
+if (miCocina && idioma === "pt") {
+    miCocina.textContent = "Minha cozinha";
+}
+const listaCocina = document.querySelectorAll(".mi-cocina-lista li");
+
+if (idioma === "pt") {
+    const traducciones = [
+        "Cozinha peruana contemporânea",
+        "Cozinha Nikkei",
+        "Cozinha asiática",
+        "Ceviches e tiraditos",
+        "Experiências gastronômicas privadas"
+    ];
+
+    listaCocina.forEach(function(item, indice) {
+        item.textContent = traducciones[indice];
+    });
+}
+const frase = document.querySelector(".frase-impacto");
+
+if (frase && idioma === "pt") {
+    frase.querySelector("h2").textContent = "Cada prato conta uma história";
+    frase.querySelector("p").textContent =
+        "Meu trabalho é fazer com que seja memorável.";
+}
+const experiencias = document.querySelector(".experiencias");
+
+if (experiencias && idioma === "pt") {
+    experiencias.querySelector("h2").textContent = "Experiências gastronômicas";
+
+    const items = experiencias.querySelectorAll(".experiencia-item");
+
+    items[0].querySelector("h3").textContent = "Chef privado";
+    items[0].querySelector("p").textContent =
+        "Uma experiência gastronômica personalizada, criada para cada ocasião.";
+
+    items[1].querySelector("h3").textContent = "Cozinha peruana & Nikkei";
+    items[1].querySelector("p").textContent =
+        "Sabores, técnica e criatividade inspirados no Peru e na Ásia.";
+
+    items[2].querySelector("h3").textContent = "Experiências";
+    items[2].querySelector("p").textContent =
+        "Uma proposta gastronômica criada para transformar cada encontro em uma experiência.";
+}
+const parrafosFinales = document.querySelectorAll("p");
+
+if (idioma === "pt") {
+
+    parrafosFinales.forEach(function(p) {
+
+        if (p.textContent.includes("Una selección de platos")) {
+            p.textContent =
+            "Uma seleção de pratos e criações que refletem minha forma de entender a gastronomia: equilíbrio, criatividade e atenção aos detalhes.";
+        }
+
+        if (p.textContent.includes("Si deseas colaborar")) {
+            p.textContent =
+            "Se desejar colaborar, contratar meus serviços ou conhecer mais sobre o meu trabalho, terei prazer em conversar com você.";
+        }
+
+        if (p.textContent.includes("Henry Diaz") || p.textContent.includes("Henry Díaz")) {
+            p.textContent =
+            "Henry Díaz · Chef peruano";
+        }
+
+    });
+
+    document.querySelectorAll("h2").forEach(function(h2) {
+        if (h2.textContent.includes("Contacto")) {
+            h2.textContent = "Contato";
+        }
+    });
+
+}
+}
+    
+});
+</script>
+
+
+
+
