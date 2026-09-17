@@ -67,7 +67,11 @@ h2 {
     padding: 40px 30px;
     margin: 80px 0;
     text-align: center;
-} 
+.presentacion p {
+    font-size: 24px;
+    line-height: 1.9;
+}
+}
 
 .presentacion h2 {
     color: white;
@@ -321,8 +325,8 @@ transform: translateX(-1370px);
 
 .experiencia-negra h3 {
     color: #00A8FF;
-    font-size: 28px;
-    margin-bottom: 15px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .experiencia-negra p {
@@ -339,7 +343,7 @@ transform: translateX(-1370px);
 
 .experiencia-blanca h3 {
     color: #00A8FF;
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -354,12 +358,12 @@ transform: translateX(-1370px);
 
 .video-presentacion {
     text-align: center;
-    margin: 60px 0;
+    margin: 100px 0;
 }
 
 .video-presentacion video {
     width: 220%;
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
@@ -431,6 +435,8 @@ body::before {
     transform: translate(0, 0);
 }
 
+
+
 /* EXPERIENCIAS — CRISTAL AZUL */
 
 .experiencias {
@@ -468,8 +474,8 @@ body::before {
     color: white;
     border: 1px solid rgba(255,255,255,0.3);
     border-radius: 20px;
-    padding: 5px 9px;
-    font-size: 12px;
+    padding: 9px 15px;
+    font-size: 16px;
     cursor: pointer;
 }
 .contacto-iconos {
@@ -477,6 +483,24 @@ body::before {
     justify-content: center;
     gap: 18px;
     margin-top: 20px;
+}
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 40px;
+    bottom: 70px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-image: url("https://cdn.simpleicons.org/whatsapp/ffffff");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 34px 34px;
 }
 
 .contacto-iconos a {
@@ -487,7 +511,32 @@ body::before {
     justify-content: center;
 }  
 
+vision-futura {
+    color: white;
+    font-size: 15px;
+    margin-top: 12px;
+    letter-spacing: 1px;
+}  
 
+.beyond-kitchen {
+    text-align: center;
+    margin: 60px 20px;
+}
+
+.beyond-kitchen h2 {
+    color: #00A8FF;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.beyond-kitchen p {
+    color: white;
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+  
   
 </style>
 
@@ -499,6 +548,12 @@ body::before {
 <h1 class="texto-arriba">Henry Díaz</h1>
 <h2 class="texto-arriba">Chef peruano</h2>
 <h3 class="texto-arriba" data-es="Cocina peruana, Nikkei & asiática" data-pt="Cozinha peruana, Nikkei & asiática">Cocina peruana, Nikkei & asiática</h3>
+
+<p class="vision-futura texto-arriba"
+data-es="Gastronomía • Tecnología • Inteligencia Artificial"
+data-pt="Gastronomia • Tecnologia • Inteligência Artificial">
+Gastronomía • Tecnología • Inteligencia Artificial
+</p>
 
 <div class="carrusel-fotos">
 
@@ -525,13 +580,19 @@ body::before {
 class="foto-portada">
 
 <div class="creator-photo">
-    <img src="yo finalizando.jpg" alt="Henry Díaz finalizando un plato">
-
-    <div class="creator-overlay texto-abajo">
-        <h2>ART &amp; Creator</h2>
-        <p>Una historia hecha de creatividad.</p>
-
-        <a href="#henry-diaz" class="conocer-btn">CONOCER MÁS</a> 
+<img src="yo finalizando.jpg" alt="Henry Díaz finalizando un plato">
+<div class="creator-overlay texto-abajo">
+<h2
+data-es="ART • Creator • AI Explorer"
+data-pt="ART • Creator • AI Explorer">
+ART • Creator • AI Explorer
+</h2>
+<p
+data-es="Una historia hecha de creatividad & tecnología."
+data-pt="Uma história feita de criatividade & tecnologia.">
+Una historia hecha de creatividad & tecnología.
+</p>
+<a href="#henry-diaz" class="conocer-btn">CONOCER MÁS</a>
           
  <div class="social-buttons">
 
@@ -556,6 +617,8 @@ TikTok
         </>
     </div>
 </div>
+
+  
 
 <div class="presentacion" id="henry-diaz"
 style="padding-top:80px;"></div>
@@ -645,6 +708,8 @@ Mi trabajo es hacer que sea memorable.
 
 <img src="sushi-roll.png" alt="Sushi Roll" width="100%">
 
+<img src="ceviche-amazonico.jpg" alt="Ceviche amazonico" width="100%">
+
 <img src="causa.jpg" alt="causa peruana" width="100%">
 
 <img src="arroz-mariscos.jpg" alt="Arroz con Mariscos" width="100%">
@@ -657,16 +722,32 @@ Mi trabajo es hacer que sea memorable.
 Una selección de platos y creaciones que reflejan mi forma de entender la gastronomía: equilibrio, creatividad y atención a los detalles.
 </p>
 
-<h2>Contacto</h2>
+<section class="beyond-kitchen texto-arriba">
+<h2
+data-es="BEYOND THE KITCHEN"
+data-pt="BEYOND THE KITCHEN">
+BEYOND THE KITCHEN
+</h2>
 
-<p>
+<p
+data-es="Explorando la inteligencia artificial para crear, desarrollar y transformar ideas."
+data-pt="Explorando a inteligência artificial para criar, desenvolver e transformar ideias.">
+Explorando la inteligencia artificial para crear, desarrollar y transformar ideas.
+</p>
+</section>
+
+<img src="bc.n.jpg" alt="Balneário Camboriú" class="foto-ciudad">
+
+<h2 class="texto-abajo">Contacto</h2>
+
+<p class="texto-abajo">
 Si deseas colaborar, contratar mis servicios o conocer más sobre mi trabajo, estaré encantado de conversar contigo.
 </p>
 
 <hr>
-<p>Henry Díaz • Chef peruano</p>
+<p class="texto-abajo">Henry Díaz · Chef peruano</p>
 
-<p>Balneário Camboriú, Brasil</p>
+<p class="texto-abajo">Balneário Camboriú, Brasil</p>
 
 <div class="contacto-iconos">
 
@@ -684,7 +765,7 @@ Si deseas colaborar, contratar mis servicios o conocer más sobre mi trabajo, es
         </svg>
     </a>
 
-    <a href="https://api.whatsapp.com/send?phone=5547997886548&text=Hola%20Henry,%20vi%20tu%20WhatsApp" target="_blank" aria-label="WhatsApp">
+    <a class="whatsapp-contacto" href="https://api.whatsapp.com/send?phone=5547997886548&text=Hola%20Henry,%20vi%20tu%20WhatsApp" target="_blank" aria-label="WhatsApp">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/>
     <path d="M8.5 7.8c.4-.4 1-.4 1.3 0l1 1.5c.3.4.2.9-.1 1.2l-.7.6c.6 1.2 1.5 2.1 2.7 2.7l.6-.7c.3-.3.8-.4 1.2-.1l1.5 1c.4.3.4.9 0 1.3l-.5.5c-.5.5-1.2.7-1.9.5-3.1-.9-5.5-3.3-6.4-6.4-.2-.7 0-1.4.5-1.9l.5-.5z" fill="white"/>
@@ -719,6 +800,7 @@ const observador = new IntersectionObserver((entradas) => {
 elementos.forEach((elemento) => {
     observador.observe(elemento);
 });
+
 </script>
 
 <script>
@@ -821,6 +903,8 @@ if (idioma === "pt") {
             "Uma seleção de pratos e criações que refletem minha forma de entender a gastronomia: equilíbrio, criatividade e atenção aos detalhes.";
         }
 
+    
+
         if (p.textContent.includes("Si deseas colaborar")) {
             p.textContent =
             "Se desejar colaborar, contratar meus serviços ou conhecer mais sobre o meu trabalho, terei prazer em conversar com você.";
@@ -840,11 +924,92 @@ if (idioma === "pt") {
     });
 
 }
-}
+}  
     
 });
 </script>
 
 
 
+<script>
+const creator = document.querySelector('.creator-photo');
+const portada = document.querySelector('.foto-portada');
 
+if (creator && portada) {
+    portada.parentNode.insertBefore(creator, portada);
+}
+</script>
+
+<script>
+const botonWhatsApp = document.querySelector('.whatsapp-flotante');
+
+if (botonWhatsApp) {
+    const idioma = localStorage.getItem("idioma") ||
+        (navigator.language.startsWith("pt") ? "pt" : "es");
+
+    const mensajePT = "Olá Henry, vi seu site e tenho interesse em conhecer mais sobre suas experiências gastronômicas e serviços de consultoria.";
+    const mensajeES = "Hola Henry, vi tu página web y me interesa conocer más sobre tus experiencias gastronómicas y servicios de consultoría.";
+
+    const mensaje = idioma === "pt" ? mensajePT : mensajeES;
+
+    botonWhatsApp.href =
+        "https://api.whatsapp.com/send?phone=5547997886548&text=" +
+        encodeURIComponent(mensaje);
+}
+</script>  
+
+<a href="https://api.whatsapp.com/send?phone=5547997886548&text=Hola%20Henry,%20vi%20tu%20]
+class="whatsapp-flotante"
+target="_blank"
+aria-label="WhatsApp">
+</a>  
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const botonWhatsApp = document.querySelector('.whatsapp-contacto');
+
+    if (botonWhatsApp) {
+        const idioma = localStorage.getItem("idioma") ||
+            (navigator.language.startsWith("pt") ? "pt" : "es");
+
+        const mensajePT = "Olá Henry, vi seu site e tenho interesse em conhecer mais sobre suas experiências gastronômicas e serviços de consultoria.";
+        const mensajeES = "Hola Henry, vi tu página web y me interesa conocer más sobre tus experiencias gastronómicas y servicios de consultoría.";
+
+        const mensaje = idioma === "pt" ? mensajePT : mensajeES;
+
+        botonWhatsApp.href =
+            "https://api.whatsapp.com/send?phone=5547997886548&text=" +
+            encodeURIComponent(mensaje);
+    }
+});
+</script>  
+
+<a href="https://api.whatsapp.com/send?phone=5547997886548&text=Hola%20Henry,%20vi%20tu%20página%20web"
+class="whatsapp-flotante"
+target="_blank"
+aria-label="WhatsApp">
+    
+</a>
+
+  
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const idioma = localStorage.getItem("idioma") ||
+        (navigator.language.startsWith("pt") ? "pt" : "es");
+
+    const mensajePT = "Olá Henry, vi seu site e tenho interesse em conhecer mais sobre suas experiências gastronômicas e serviços de consultoria.";
+
+    const mensajeES = "Hola Henry, vi tu página web y me interesa conocer más sobre tus experiencias gastronómicas y servicios de consultoría.";
+
+    const mensaje = idioma === "pt" ? mensajePT : mensajeES;
+
+    document.querySelectorAll(".whatsapp-flotante").forEach(function(boton) {
+        boton.href =
+            "https://api.whatsapp.com/send?phone=5547997886548&text=" +
+            encodeURIComponent(mensaje);
+    });
+
+});
+</script>
