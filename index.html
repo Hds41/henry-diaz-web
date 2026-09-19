@@ -52,7 +52,7 @@ p.vision-futura.texto-arriba {
 
 .mi-cocina-lista li {
     color: white;
-    font-size: 22px;
+    font-size: 26px;
     margin-bottom: 25px;
     letter-spacing: 1px;
 }  
@@ -88,7 +88,7 @@ p.vision-futura.texto-arriba {
 }
 
 .texto-abajo p {
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.9;
 }
 
@@ -355,7 +355,7 @@ transform: translateX(-1370px);
 
 .experiencia-negra p {
     color: #00A8FF;
-    font-size: 18px;
+    font-size: 26px;
     max-width: 650px;
     margin: 0 auto;
     line-height: 1.6;
@@ -374,7 +374,7 @@ transform: translateX(-1370px);
 .experiencia-negra p,
 .experiencia-blanca p {
     color: #00A8FF;
-    font-size: 15px;
+    font-size: 20px;
     max-width: 500px;
     margin: 0 auto;
     line-height: 1.6;
@@ -390,7 +390,15 @@ transform: translateX(-1370px);
     max-width: 400px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    display: block;
+margin: 0 auto;
 }
+
+.video-presentacion video {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}  
 
 /* LUZ INTELIGENTE */
 body::before {
@@ -459,7 +467,10 @@ body::before {
     transform: translate(0, 0);
 }
 
-
+.texto-galeria {
+    font-size: 24px;
+    line-height: 1.8;
+}
 
 /* EXPERIENCIAS — CRISTAL AZUL */
 
@@ -505,9 +516,14 @@ body::before {
 .contacto-iconos {
     display: flex;
     justify-content: center;
-    gap: 18px;
+    gap: 28px;
     margin-top: 20px;
 }
+
+.contacto-iconos svg {
+    width: 34px;
+    height: 34px;
+}  
 
 .whatsapp-flotante {
     position: fixed;
@@ -535,9 +551,18 @@ body::before {
     justify-content: center;
 }  
 
+.contacto-grande h2 {
+    font-size: 42px;
+}
+
+.contacto-grande p {
+    font-size: 24px;
+    line-height: 1.8;
+}  
+
 vision-futura {
     color: white;
-    font-size: 20px;
+    font-size: 26px;
     margin-top: 12px;
     letter-spacing: 1px;
 }  
@@ -549,17 +574,26 @@ vision-futura {
 
 .beyond-kitchen h2 {
     color: #00A8FF;
-    font-size: 30px;
+    font-size: 33px;
     margin-bottom: 15px;
 }
 
 .beyond-kitchen p {
     color: white;
-    font-size: 17px;
+    font-size: 24px;
     line-height: 1.6;
     max-width: 700px;
     margin: 0 auto;
 }
+
+h2.texto-abajo {
+    font-size: 42px;
+}
+
+p.texto-abajo {
+    font-size: 24px;
+    line-height: 1.8;
+}  
   
   
 </style>
@@ -724,13 +758,23 @@ Mi trabajo es hacer que sea memorable.
     <video autoplay muted loop playsinline>
         <source src="fuegov.mp4" type="video/mp4">
     </video>
-</div>
+</>
+
+<div class="video-presentacion video-salmon">
+<video autoplay muted loop playsinline>
+<source src="samurai.1.mp4" type="video/mp4">
+</video>
+<button class="boton-sonido" type="button">🔊</button>
+</>
+</>
 
 <h2 class="galeria-titulo">Galería</h2>
 
-<img src="niguiri-nikkei.png" alt="Niguiri Nikkei" width="100%">
+<img src="sushi-roll.png" alt="Niguiri Nikkei" width="100%">
 
-<img src="sushi-roll.png" alt="Sushi Roll" width="100%">
+<img src="niguiri.2.jpg" alt=Niguiri fire" width="100%">
+
+<img src="niguiri-nikkei.png" alt="Sushi Roll" width="100%">
 
 <img src="ceviche-amazonico.jpg" alt="Ceviche amazonico" width="100%">
 
@@ -742,7 +786,7 @@ Mi trabajo es hacer que sea memorable.
 
 <img src="tiradito-nikkei.jpg" class="galeria-ajustada">
 
-<p>
+<p class="texto-galeria">
 Una selección de platos y creaciones que reflejan mi forma de entender la gastronomía: equilibrio, creatividad y atención a los detalles.
 </p>
 
@@ -761,6 +805,8 @@ Explorando la inteligencia artificial para crear, desarrollar y transformar idea
 </section>
 
 <img src="bc.n.jpg" alt="Balneário Camboriú" class="foto-ciudad">
+
+
 
 <h2 class="texto-abajo">Contacto</h2>
 
@@ -800,14 +846,14 @@ Si deseas colaborar, contratar mis servicios o conocer más sobre mi trabajo, es
 
 <script>
 const elementos = document.querySelectorAll(
-    'img, .texto-arriba, .texto-izquierda, .texto-derecha, .texto-abajo, .experiencia-item'
+    'img,video, .texto-arriba, .texto-izquierda, .texto-derecha, .texto-abajo, .experiencia-item'
 );
 
 const observador = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
         if (entrada.isIntersecting) {
 
-            if (entrada.target.tagName === "IMG") {
+            if (entrada.target.tagName === "IMG" || entrada.target.tagName === "VIDEO") {
                 entrada.target.style.opacity = "1";
                 entrada.target.style.transform = "translateY(0)";
             } else {
@@ -1036,4 +1082,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+const videoSalmon = document.querySelector(".video-salmon video");
+const botonSonido = document.querySelector(".boton-sonido");
+
+botonSonido.addEventListener("click", () => {
+    videoSalmon.muted = !videoSalmon.muted;
+    botonSonido.textContent = videoSalmon.muted ? "🔊" : "🔇";
+});
+  
 </script>
