@@ -743,25 +743,39 @@ p.texto-abajo {
   
 @media (max-width: 600px) {
 
+    .proyectos-imagen {
+        overflow: visible;
+    }
+
     .proyecto-bloque {
-        position: absolute;
-        width: 280px;
+        width: 85%;
+        left: 50%;
+        right: auto;
+    }
+
+    .proyecto-izquierda {
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .proyecto-derecha {
+        top: 300px;
         left: 50%;
         right: auto;
         transform: translateX(-50%);
     }
 
-    .proyecto-izquierda {
-        top: 60px;
-    }
-
-    .proyecto-derecha {
-        top: 300px;
-    }
-
     .proyecto-abajo {
-        top: 540px;
+        top: 560px;
         bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .proyecto-izquierda.visible,
+    .proyecto-derecha.visible,
+    .proyecto-abajo.visible {
         transform: translateX(-50%);
     }
 
