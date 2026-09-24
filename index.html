@@ -605,7 +605,7 @@ p.texto-abajo {
 
 <h1 class="texto-arriba">Henry Díaz</h1>
 <h2 class="texto-arriba">Chef peruano</h2>
-<h3 class="texto-arriba" data-es="Cocina peruana, Nikkei & asiática" data-pt="Cozinha peruana, Nikkei & asiática">Cocina peruana, Nikkei & asiática</h3>
+<h3 class="texto-arriba" data-es="Cocina peruana contemporánea • Nikkei" data-pt="Cozinha peruana contemporánea • Nikkei">Cocina peruana contemporánea • Nikkei</h3>
 
 <p class="vision-futura texto-arriba"
 data-es="Gastronomía • Tecnología • Inteligencia Artificial"
@@ -684,24 +684,22 @@ style="padding-top:80px;"></div>
 <h2>Henry Díaz</h2>
 
 
+                                                                                    
+  
 <p>
-Soy Henry Díaz. Nací y crecí en Perú, y la cocina se convirtió en una de las formas más importantes de expresar mi creatividad.
+  Soy Henry Díaz. Nací y crecí en Perú, donde la gastronomía se convirtió en una de las principales formas de expresar mi creatividad.
 </p>
 
 <p>
-Mi recorrido profesional comenzó en otros caminos, pero fue entre el ritmo intenso de los servicios, la energía de una cocina profesional y el deseo constante de aprender donde descubrí una pasión que transformó mi vida. Allí encontré un espacio donde la creatividad, la disciplina y la emoción se encuentran cada día.
+  Mi formación en <strong>Le Cordon Bleu Perú</strong> y mi trayectoria profesional me llevaron a desarrollar una cocina basada en la tradición peruana, la influencia nikkei y una visión contemporánea, donde busco equilibrio, técnica y personalidad.
 </p>
 
 <p>
-Mi formación en Le Cordon Bleu Perú y las experiencias que he vivido a lo largo de los años han enriquecido mi manera de entender la gastronomía y la atención por los detalles.
+  Pero mi camino no termina en la gastronomía. Mi curiosidad me lleva hacia la <strong>tecnología, la inteligencia artificial y la creación de nuevos proyectos</strong>.
 </p>
 
 <p>
-Hoy continúo desarrollando una cocina influenciada por las tradiciones peruanas, nikkei y asiáticas, buscando siempre equilibrio, técnica y personalidad en cada plato.
-</p>
-
-<p>
-Pero la gastronomía no es mi único interés. También me apasiona explorar nuevas ideas, aprender constantemente y descubrir nuevas formas de crear. Me interesa cómo la tecnología puede ayudarnos a desarrollar proyectos, compartir conocimiento y conectar con más personas. Creo que la innovación y la cocina tienen algo en común: ambas nacen de la curiosidad, la creatividad y el deseo de construir algo con propósito.
+  Hoy exploro cómo conectar estos mundos para transformar ideas en experiencias, herramientas y proyectos con propósito.
 </p>
 
 </div>
@@ -713,7 +711,6 @@ Pero la gastronomía no es mi único interés. También me apasiona explorar nue
 <ul class="mi-cocina-lista">
   <li>Cocina peruana contemporánea</li>
   <li>Cocina Nikkei</li>
-  <li>Cocina asiática</li>
   <li>Ceviches y tiraditos</li>
   <li>Experiencias gastronómicas privadas</li>
 </ul>
@@ -744,7 +741,7 @@ Mi trabajo es hacer que sea memorable.
 
 <div class="experiencia-item experiencia-blanca experiencia-2 texto-abajo">
     <h3>Cocina peruana & Nikkei</h3>
-    <p>Sabores, técnica y creatividad inspirados en Perú y Asia.</p>
+    <p>Sabores, técnica y creatividad inspirados en la cultura peruana y en sus influencias.</p>
 </div>
 
 <div class="experiencia-item experiencia-negra experiencia-3 texto-abajo">
@@ -889,8 +886,8 @@ const textos = document.querySelectorAll("h3.texto-arriba");
 
 if (idioma === "pt") {
     textos.forEach(function(texto) {
-        if (texto.textContent.includes("Cocina peruana")) {
-            texto.textContent = "Cozinha peruana, Nikkei & asiática";
+        if (texto.textContent.includes("Cocina peruana contemporánea")) {
+            texto.textContent = "Cozinha peruana contemporânea • Nikkei";
         }
     });
  const creator = document.querySelector(".creator-overlay");
@@ -899,16 +896,21 @@ if (creator && idioma === "pt") {
     creator.querySelector("p").textContent = "Uma história feita de criatividade.";
     creator.querySelector(".conocer-btn").textContent = "CONHECER MAIS";
 } 
-const presentacionTextos = document.querySelectorAll(".presentacion + .texto-abajo p");
+const presentacionTextos = document.querySelectorAll(".Presentacion + .texto-abajo p");
 
 if (idioma === "pt") {
-    const traduccionesPresentacion = [
-        "Sou Henry Díaz. Nasci e cresci no Peru, e a cozinha se tornou uma das formas mais importantes de expressar minha criatividade.",
-        "Minha trajetória profissional começou por outros caminhos, mas foi entre o ritmo intenso dos serviços, a energia de uma cozinha profissional e o desejo constante de aprender que descobri uma paixão que transformou minha vida. Ali encontrei um espaço onde a criatividade, a disciplina e a emoção se encontram todos os dias.",
-        "Minha formação no Le Cordon Bleu Peru e as experiências que vivi ao longo dos anos enriqueceram minha maneira de compreender a gastronomia e a atenção aos detalhes.",
-        "Hoje continuo desenvolvendo uma cozinha influenciada pelas tradições peruanas, nikkei e asiáticas, buscando sempre equilíbrio, técnica e personalidade em cada prato.",
-        "Mas a gastronomia não é meu único interesse. Também me apaixona explorar novas ideias, aprender constantemente e descobrir novas formas de criar. Tenho interesse em como a tecnologia pode nos ajudar a desenvolver projetos, compartilhar conhecimento e conectar-nos com mais pessoas. Acredito que a inovação e a cozinha têm algo em comum: ambas nascem da curiosidade, da criatividade e do desejo de construir algo com propósito."
-    ];
+  const traduccionesPresentacion = [
+
+
+"Sou Henry Díaz. Nasci e cresci no Peru, onde a gastronomia se tornou uma das principais formas de expressar minha criatividade.",
+
+"Minha formação no Le Cordon Bleu Peru e minha trajetória profissional me levaram a desenvolver uma cozinha baseada na tradição peruana, na influência nikkei e em uma visão contemporânea.",
+
+"Mas meu caminho não termina na gastronomia. Minha curiosidade me leva à tecnologia, à inteligência artificial e à criação de novos projetos.",
+
+"Hoje exploro como conectar esses mundos para transformar ideias em experiências, ferramentas e projetos com propósito."
+];
+
 
     presentacionTextos.forEach(function(parrafo, indice) {
         if (traduccionesPresentacion[indice]) {
@@ -956,7 +958,7 @@ if (experiencias && idioma === "pt") {
 
     items[1].querySelector("h3").textContent = "Cozinha peruana & Nikkei";
     items[1].querySelector("p").textContent =
-        "Sabores, técnica e criatividade inspirados no Peru e na Ásia.";
+        "Sabores, técnica e criatividade inspirados na cultura peruana e em suas influências.";
 
     items[2].querySelector("h3").textContent = "Experiências";
     items[2].querySelector("p").textContent =
@@ -980,9 +982,9 @@ if (idioma === "pt") {
             "Para colaborar ou contratar meus serviços, entre em contato comigo.";
         }
 
-        if (p.textContent.includes("Henry Diaz") || p.textContent.includes("Henry Díaz")) {
-            p.textContent =
-            "Henry Díaz · Chef peruano";
+        if (p.textContent.includes("Chef peruano")) {
+    p.textContent =
+    "Henry Díaz · Chef peruano";
         }
 
     });
