@@ -744,31 +744,37 @@ p.texto-abajo {
 
 @media (max-width: 600px) {
 
+    .proyecto-izquierda,
+    .proyecto-derecha,
+    .proyecto-abajo {
+        left: 50% !important;
+        right: auto !important;
+        width: 85% !important;
+        box-sizing: border-box;
+    }
+
     .proyecto-izquierda {
-        left: 50%;
-        top: 40px;
-        transform: translateX(-50%);
+        top: 40px !important;
+        bottom: auto !important;
+        transform: translateX(-50%) !important;
     }
 
     .proyecto-derecha {
-        left: 50%;
-        right: auto;
-        top: 300px;
-        transform: translateX(-50%);
+        top: 300px !important;
+        bottom: auto !important;
+        transform: translateX(-50%) !important;
     }
 
     .proyecto-abajo {
-        left: 50%;
-        right: auto;
-        top: 560px;
-        bottom: auto;
-        transform: translateX(-50%);
+        top: 560px !important;
+        bottom: auto !important;
+        transform: translateX(-50%) !important;
     }
 
     .proyecto-izquierda.visible,
     .proyecto-derecha.visible,
     .proyecto-abajo.visible {
-        transform: translateX(-50%);
+        transform: translateX(-50%) !important;
     }
 
 }
