@@ -742,7 +742,36 @@ p.texto-abajo {
 }  
   
 
+@media (max-width: 600px) {
 
+    .proyecto-izquierda {
+        left: 50%;
+        top: 40px;
+        transform: translateX(-50%);
+    }
+
+    .proyecto-derecha {
+        left: 50%;
+        right: auto;
+        top: 300px;
+        transform: translateX(-50%);
+    }
+
+    .proyecto-abajo {
+        left: 50%;
+        right: auto;
+        top: 560px;
+        bottom: auto;
+        transform: translateX(-50%);
+    }
+
+    .proyecto-izquierda.visible,
+    .proyecto-derecha.visible,
+    .proyecto-abajo.visible {
+        transform: translateX(-50%);
+    }
+
+}
   
 </style>
 
