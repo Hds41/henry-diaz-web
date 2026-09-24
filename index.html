@@ -385,6 +385,152 @@ transform: translateX(-1370px);
     margin: 100px 0;
 }
 
+.proyectos {
+    margin: 100px 0;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.proyectos-etiqueta {
+    display: inline-block;
+    background: white;
+    color: #00A8FF;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 12px 28px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 5;
+    border-radius: 50px;
+}
+
+.proyectos-etiqueta {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1.9s ease, transform 1.9s ease;
+}
+
+.proyectos-etiqueta.visible {
+    opacity: 1;
+    transform: translateY(0);
+}  
+
+.proyectos-imagen {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #00A8FF;
+}
+
+.proyectos-imagen img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    display: block;
+}
+
+.proyecto-bloque {
+    position: absolute;
+    background: #050505;
+    border: none;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    width: 340px;
+    z-index: 3;
+    text-align: left;
+}
+
+.proyecto-bloque span {
+    color: #00A8FF;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.proyecto-bloque h3 {
+    color: white;
+    font-size: 28px;
+    margin: 10px 0 12px;
+}
+
+.proyecto-bloque p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.proyecto-izquierda {
+    left: 130px;
+    top: 60px;
+}
+
+.proyecto-derecha {
+    right: 120px;
+    top: 315px;
+}
+
+.proyecto-abajo {
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+}
+
+.proyecto-izquierda,
+.proyecto-derecha {
+    opacity: 0;
+    transition: opacity 1.9s ease, transform 1.9s ease;
+}
+
+.proyecto-abajo {
+    opacity: 0;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.proyecto-izquierda {
+    transform: translateX(-120px);
+}
+
+.proyecto-derecha {
+    transform: translateX(120px);
+}
+
+.proyecto-abajo {
+    transform: translate(-50%, 120px);
+}
+
+.proyecto-izquierda.visible,
+.proyecto-derecha.visible,
+.proyecto-abajo.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.proyecto-abajo.visible {
+    transform: translateX(-50%);
+}  
+
+.proyectos-frase {
+    max-width: 750px;
+    margin: 35px auto 0;
+}
+
+.proyectos-frase p {
+    color: white;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.proyectos-frase span {
+    display: block;
+    color: #00A8FF;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 12px;
+}  
+
 .video-presentacion video {
     width: 220%;
     max-width: 400px;
@@ -751,6 +897,68 @@ Mi trabajo es hacer que sea memorable.
 
 </div>
 
+<!-- PROYECTOS -->
+
+<section class="proyectos">
+
+    <div class="proyectos-etiqueta">
+        PROYECTOS
+    </div>
+
+    <div class="proyectos-imagen">
+
+        <img src="futuro.jpg" alt="Henry Díaz — Proyectos">
+
+        <div class="proyecto-bloque proyecto-izquierda">
+
+            <span>01</span>
+
+            <h3>Experiencias digitales</h3>
+
+            <p>
+                Creo páginas web con identidad propia para personas, marcas y proyectos.
+            </p>
+
+        </div>
+
+
+        <div class="proyecto-bloque proyecto-derecha">
+
+            <span>02</span>
+
+            <h3>Inteligencia artificial</h3>
+
+            <p>
+                Exploro y desarrollo herramientas y agentes de inteligencia artificial para transformar ideas en soluciones útiles.
+            </p>
+
+        </div>
+
+
+        <div class="proyecto-bloque proyecto-abajo">
+
+            <span>03</span>
+
+            <h3>Creación digital</h3>
+
+            <p>
+                Desarrollo ideas, contenidos y experiencias que conectan creatividad, tecnología, imagen y gastronomía.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="proyectos-frase">
+    <p>Creo y conecto ideas que normalmente no se encuentran.</p>
+    <span>Gastronomía • Tecnología • Inteligencia Artificial</span>
+    </div>
+
+</section>
+
+<!-- FIN PROYECTOS -->
+
 <div class="video-presentacion">
     <video autoplay muted loop playsinline>
         <source src="fuegov.mp4" type="video/mp4">
@@ -929,7 +1137,6 @@ if (idioma === "pt") {
     const traducciones = [
         "Cozinha peruana contemporânea",
         "Cozinha Nikkei",
-        "Cozinha asiática",
         "Ceviches e tiraditos",
         "Experiências gastronômicas privadas"
     ];
@@ -964,6 +1171,69 @@ if (experiencias && idioma === "pt") {
     items[2].querySelector("p").textContent =
         "Uma proposta gastronômica criada para transformar cada encontro em uma experiência.";
 }
+
+const etiquetaProyecto = document.querySelector(".proyectos-etiqueta");
+
+if (etiquetaProyecto && idioma === "pt") {
+    etiquetaProyecto.textContent = "PROJETOS";
+}
+  
+
+const proyectos = document.querySelectorAll(".proyecto-bloque");
+
+  if (proyectos.length >= 3 && idioma === "pt") {
+
+    proyectos[0].querySelector("h3").textContent =
+        "Experiências digitais";
+
+    proyectos[0].querySelector("p").textContent =
+        "Crio páginas web com identidade própria para pessoas, marcas e projetos.";
+
+    proyectos[1].querySelector("h3").textContent =
+        "Inteligência artificial";
+
+    proyectos[1].querySelector("p").textContent =
+        "Exploro e desenvolvo ferramentas e agentes de inteligência artificial para transformar ideias em soluções úteis.";
+
+    proyectos[2].querySelector("h3").textContent =
+        "Criação digital";
+
+    proyectos[2].querySelector("p").textContent =
+        "Desenvolvo ideias, conteúdos e experiências que conectam criatividade, tecnologia, imagem e gastronomia.";
+}
+
+
+  
+
+const fraseProyecto = document.querySelector(".proyectos-frase p");
+
+if (fraseProyecto) {
+    fraseProyecto.textContent =
+        "Crio e conecto ideias que normalmente não se encontram.";
+}
+
+const subtituloProyecto = document.querySelector(".proyectos-frase span");
+
+if (subtituloProyecto) {
+    subtituloProyecto.textContent =
+        "Gastronomia • Tecnologia • Inteligência Artificial";
+}
+
+const beyondKitchen =  document.querySelector(".beyond-kitchen p");
+
+if (beyondKitchen) {
+    beyondKitchen.textContent =
+        "Explorando a inteligência artificial para criar, desenvolver e transformar ideias.";
+}
+
+const contactoTexto = document.querySelector(".texto-abajo + p");
+
+if (contactoTexto && contactoTexto.textContent.includes("Para colaborar")) {
+    contactoTexto.textContent =
+        "Para colaborar ou contratar meus serviços, entre em contato comigo.";
+}
+  
+  
 const parrafosFinales = document.querySelectorAll("p");
 
 if (idioma === "pt") {
@@ -977,10 +1247,7 @@ if (idioma === "pt") {
 
     
 
-        if (p.textContent.includes("Si deseas colaborar")) {
-            p.textContent =
-            "Para colaborar ou contratar meus serviços, entre em contato comigo.";
-        }
+        
 
         if (p.textContent.includes("Chef peruano")) {
     p.textContent =
@@ -1092,5 +1359,89 @@ botonSonido.addEventListener("click", () => {
     videoSalmon.muted = !videoSalmon.muted;
     botonSonido.textContent = videoSalmon.muted ? "🔊" : "🔇";
 });
+
+const bloquesProyectos = document.querySelectorAll(".proyecto-bloque");
+
+const observadorProyectos = new IntersectionObserver(
+    function(entradas) {
+        entradas.forEach(function(entrada) {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observadorProyectos.unobserve(entrada.target);
+            }
+        });
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+bloquesProyectos.forEach(function(bloque) {
+    observadorProyectos.observe(bloque);
+});  
+
+
+const etiquetaProyectos = document.querySelector(".proyectos-etiqueta");
+
+const observadorEtiqueta = new IntersectionObserver(
+    function(entradas) {
+        entradas.forEach(function(entrada) {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observadorEtiqueta.unobserve(entrada.target);
+            }
+        });
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+if (etiquetaProyectos) {
+    observadorEtiqueta.observe(etiquetaProyectos);
+}  
+
+const etiquetaProyecto = document.querySelector(".proyectos-etiqueta");
+
+if (etiquetaProyecto && idioma === "pt") {
+    etiquetaProyecto.textContent = "PROJETOS";
+}
+
+const proyectos = document.querySelectorAll(".proyecto-bloque");
+
+if (proyectos.length >= 3) {
+
+    proyectos[0].querySelector("h3").textContent =
+    "Experiências digitais";
+
+    proyectos[0].querySelector("p").textContent =
+    "Crio páginas web com identidade própria para pessoas, marcas e projetos.";
+
+    proyectos[1].querySelector("h3").textContent =
+    "Inteligência artificial";
+
+    proyectos[1].querySelector("p").textContent =
+    "Exploro e desenvolvo ferramentas e agentes de inteligência artificial para transformar ideias em soluções úteis.";
+
+    proyectos[2].querySelector("h3").textContent =
+    "Criação digital";
+
+    proyectos[2].querySelector("p").textContent =
+    "Desenvolvo ideias, conteúdos e experiências que conectam criatividade, tecnologia, imagem e gastronomia.";
+}
+
+const fraseProyecto = document.querySelector(".proyectos-frase p");
+
+if (fraseProyecto) {
+    fraseProyecto.textContent =
+    "Crio e conecto ideias que normalmente não se encontram.";
+}
+
+const subtituloProyecto = document.querySelector(".proyectos-frase span");
+
+if (subtituloProyecto) {
+    subtituloProyecto.textContent =
+    "Gastronomia • Tecnologia • Inteligência Artificial";
+}  
   
 </script>
