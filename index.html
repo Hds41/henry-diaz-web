@@ -1275,6 +1275,14 @@ p.texto-abajo {
     border-top-color: rgba(255,255,255,0.12);
 }
 
+.experimento-card:focus .experimento-detalle {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top-color: rgba(255,255,255,0.12);
+}  
+
 .experimento-card:active .experimento-detalle {
     max-height: 500px;
     opacity: 1;
@@ -1285,6 +1293,17 @@ p.texto-abajo {
 
 .experimento-opciones {
     align-items: start;
+}  
+
+.experimento-card {
+    -webkit-tap-highlight-color: transparent;
+}  
+
+.experimento-card.ativo {
+    border-color: #00A8FF;
+    box-shadow:
+        0 0 20px rgba(0,168,255,0.45),
+        0 0 50px rgba(0,168,255,0.15);
 }  
   
 </style>
@@ -1572,6 +1591,9 @@ Mi trabajo es hacer que sea memorable.
             <strong>→</strong>
 
         </div>
+
+
+      
 
         <div class="experimento-card">
 
@@ -2067,6 +2089,9 @@ const observadorEtiqueta = new IntersectionObserver(
 if (etiquetaProyectos) {
     observadorEtiqueta.observe(etiquetaProyectos);
 }  
+
+let idioma = localStorage.getItem("idioma") ||
+    (navigator.language.startsWith("pt") ? "pt" : "es");  
 
 const etiquetaProyecto = document.querySelector(".proyectos-etiqueta");
 
