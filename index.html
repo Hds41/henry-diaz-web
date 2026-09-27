@@ -538,14 +538,11 @@ transform: translateX(-1370px);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     display: block;
-margin: 0 auto;
-}
-
-.video-presentacion video {
+    margin: 0 auto;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
-}  
+}
 
 /* LUZ INTELIGENTE */
 body::before {
@@ -742,6 +739,553 @@ p.texto-abajo {
     line-height: 1.8;
 }  
   
+
+.experimento {
+    margin: 110px 0;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.experimento-etiqueta {
+    display: inline-block;
+    background: white;
+    color: #00A8FF;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 12px 28px;
+    margin-bottom: 35px;
+    border-radius: 50px;
+}
+
+.experimento-intro {
+    max-width: 850px;
+    margin: 0 auto 50px;
+}
+
+.experimento-intro h2 {
+    color: white;
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.experimento-intro p {
+    color: #00A8FF;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 18px;
+}
+
+.experimento-opciones {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.experimento-card {
+    position: relative;
+    background: #050505;
+    padding: 22px 65px 22px 32px;
+    border-radius: 12px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.experimento-card span {
+    color: #00A8FF;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.experimento-card h3 {
+    color: white;
+    font-size: 28px;
+    margin: 7px 0 6px;
+}
+
+.experimento-card p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.experimento-card strong {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00A8FF;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+ 
+
+
+.experimento-detalle {
+    display: none;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.experimento-detalle h4 {
+    color: #00A8FF;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 18px 0 8px;
+}
+
+.experimento-detalle p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.experimento-card.ativo .experimento-detalle {
+    display: block;
+}
+  
+.experimento-conceptos {
+    max-width: 900px;
+    margin: 55px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.concepto-card {
+    background: #050505;
+    border: 1px solid rgba(0,168,255,0.25);
+    border-radius: 12px;
+    padding: 28px 32px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.concepto-card h4 {
+    color: #00A8FF;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,168,255,0.35);
+}
+
+.concepto-card p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.experimento-cierre {
+    max-width: 800px;
+    margin: 55px auto 0;
+    text-align: center;
+}
+
+.experimento-cierre p {
+    color: white;
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ===== PROYECTOS — DISEÑO FINAL ===== */
+
+.experimento-opciones {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.experimento-card {
+    min-height: 250px;
+    background: #050505;
+    border: 1px solid rgba(0,168,255,0.35);
+    border-radius: 14px;
+    padding: 28px 28px 32px;
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.experimento-card:hover {
+    transform: translateY(-8px);
+    border-color: #00A8FF;
+}
+
+.experimento-card span {
+    color: #00A8FF;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.experimento-card h3 {
+    color: white;
+    font-size: 27px;
+    line-height: 1.2;
+    margin: 18px 0 16px;
+}
+
+.experimento-card p {
+    color: rgba(255,255,255,0.82);
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.experimento-card strong {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    top: auto;
+    transform: none;
+    color: #00A8FF;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+/* ===== SEGUNDA CAPA ===== */
+
+.experimento-conceptos {
+    max-width: 1100px;
+    margin: 70px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.concepto-card {
+    position: relative;
+    background: #050505;
+    border: 1px solid #00A8FF;
+    border-radius: 14px;
+    padding: 30px;
+    min-height: 230px;
+    box-sizing: border-box;
+    text-align: left;
+    overflow: hidden;
+}
+
+.concepto-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #00A8FF;
+}
+
+.concepto-card h4 {
+    color: #00A8FF;
+    font-size: 21px;
+    letter-spacing: 0px;
+    margin: 0 0 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(0,168,255,0.35);
+}
+
+.concepto-card p {
+    color: white;
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* ===== CIERRE ===== */
+
+.experimento-cierre {
+    max-width: 850px;
+    margin: 70px auto 0;
+    padding: 35px 25px;
+    border-top: 1px solid rgba(0,168,255,0.35);
+    border-bottom: 1px solid rgba(0,168,255,0.35);
+    text-align: center;
+}
+
+.experimento-cierre p {
+    color: white;
+    font-size: 23px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* ===== MÓVIL ===== */
+
+@media (max-width: 700px) {
+
+    .experimento-opciones {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .experimento-card {
+        min-height: 220px;
+        padding: 25px;
+    }
+
+    .experimento-card h3 {
+        font-size: 27px;
+    }
+
+    .experimento-card p {
+        font-size: 19px;
+    }
+
+    .experimento-conceptos {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 55px;
+    }
+
+    .concepto-card {
+        min-height: auto;
+        padding: 27px;
+    }
+
+    .concepto-card p {
+        font-size: 19px;
+    }
+
+    .experimento-cierre {
+        margin-top: 55px;
+        padding: 30px 20px;
+    }
+
+    .experimento-cierre p {
+        font-size: 21px;
+    }
+}  
+
+.concepto-card:last-child {
+    position: relative;
+    overflow: hidden;
+}
+
+.concepto-card:last-child::after {
+    content: "2050";
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 65px;
+    font-weight: 800;
+    color: rgba(0,168,255,0.07);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.experimento {
+    position: relative;
+    overflow: hidden;
+}
+
+.experimento::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        circle,
+        rgba(0,168,255,0.16) 0%,
+        rgba(0,168,255,0.07) 35%,
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.experimento-etiqueta,
+.experimento-intro,
+.experimento-opciones,
+.experimento-conceptos,
+.experimento-cierre {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== MATRIX — COLUMNAS VERTICALES ===== */
+
+.experimento {
+    position: relative;
+    overflow: visible;
+}
+
+.experimento::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: -700px 0 0 0;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='700' viewBox='0 0 520 700'%3E%3Cg fill='%2300a8ff' fill-opacity='.18' font-family='monospace' font-size='14' font-weight='700'%3E%3Ctext x='15' y='30'%3E7%3C/text%3E%3Ctext x='15' y='52'%3E3%3C/text%3E%3Ctext x='15' y='74'%3E9%3C/text%3E%3Ctext x='15' y='96'%3E1%3C/text%3E%3Ctext x='15' y='118'%3E0%3C/text%3E%3Ctext x='15' y='140'%3E4%3C/text%3E%3Ctext x='15' y='162'%3E8%3C/text%3E%3Ctext x='15' y='184'%3E6%3C/text%3E%3Ctext x='15' y='206'%3E2%3C/text%3E%3Ctext x='15' y='228'%3E5%3C/text%3E%3Ctext x='15' y='250'%3E1%3C/text%3E%3Ctext x='15' y='272'%3E8%3C/text%3E%3Ctext x='15' y='294'%3E0%3C/text%3E%3Ctext x='15' y='316'%3E6%3C/text%3E%3Ctext x='15' y='338'%3E3%3C/text%3E%3Ctext x='15' y='360'%3E9%3C/text%3E%3Ctext x='15' y='382'%3E4%3C/text%3E%3Ctext x='15' y='404'%3E7%3C/text%3E%3Ctext x='15' y='426'%3E2%3C/text%3E%3Ctext x='15' y='448'%3E8%3C/text%3E%3Ctext x='15' y='470'%3E0%3C/text%3E%3Ctext x='15' y='492'%3E5%3C/text%3E%3Ctext x='15' y='514'%3E3%3C/text%3E%3Ctext x='15' y='536'%3E1%3C/text%3E%3Ctext x='15' y='558'%3E9%3C/text%3E%3Ctext x='15' y='580'%3E6%3C/text%3E%3Ctext x='15' y='602'%3E4%3C/text%3E%3Ctext x='15' y='624'%3E7%3C/text%3E%3Ctext x='15' y='646'%3E2%3C/text%3E%3Ctext x='15' y='668'%3E8%3C/text%3E%3Ctext x='90' y='80'%3E4%3C/text%3E%3Ctext x='90' y='102'%3E9%3C/text%3E%3Ctext x='90' y='124'%3E1%3C/text%3E%3Ctext x='90' y='146'%3E7%3C/text%3E%3Ctext x='90' y='168'%3E0%3C/text%3E%3Ctext x='90' y='190'%3E6%3C/text%3E%3Ctext x='90' y='212'%3E3%3C/text%3E%3Ctext x='90' y='234'%3E8%3C/text%3E%3Ctext x='90' y='256'%3E2%3C/text%3E%3Ctext x='90' y='278'%3E5%3C/text%3E%3Ctext x='90' y='300'%3E9%3C/text%3E%3Ctext x='90' y='322'%3E1%3C/text%3E%3Ctext x='90' y='344'%3E4%3C/text%3E%3Ctext x='90' y='366'%3E8%3C/text%3E%3Ctext x='90' y='388'%3E0%3C/text%3E%3Ctext x='90' y='410'%3E7%3C/text%3E%3Ctext x='90' y='432'%3E3%3C/text%3E%3Ctext x='90' y='454'%3E6%3C/text%3E%3Ctext x='90' y='476'%3E2%3C/text%3E%3Ctext x='90' y='498'%3E9%3C/text%3E%3Ctext x='90' y='520'%3E5%3C/text%3E%3Ctext x='90' y='542'%3E1%3C/text%3E%3Ctext x='90' y='564'%3E8%3C/text%3E%3Ctext x='90' y='586'%3E4%3C/text%3E%3Ctext x='90' y='608'%3E0%3C/text%3E%3Ctext x='90' y='630'%3E7%3C/text%3E%3Ctext x='90' y='652'%3E3%3C/text%3E%3Ctext x='165' y='40'%3E8%3C/text%3E%3Ctext x='165' y='62'%3E2%3C/text%3E%3Ctext x='165' y='84'%3E6%3C/text%3E%3Ctext x='165' y='106'%3E0%3C/text%3E%3Ctext x='165' y='128'%3E9%3C/text%3E%3Ctext x='165' y='150'%3E3%3C/text%3E%3Ctext x='165' y='172'%3E7%3C/text%3E%3Ctext x='165' y='194'%3E1%3C/text%3E%3Ctext x='165' y='216'%3E5%3C/text%3E%3Ctext x='165' y='238'%3E4%3C/text%3E%3Ctext x='165' y='260'%3E8%3C/text%3E%3Ctext x='165' y='282'%3E2%3C/text%3E%3Ctext x='165' y='304'%3E0%3C/text%3E%3Ctext x='165' y='326'%3E6%3C/text%3E%3Ctext x='165' y='348'%3E9%3C/text%3E%3Ctext x='165' y='370'%3E1%3C/text%3E%3Ctext x='165' y='392'%3E7%3C/text%3E%3Ctext x='165' y='414'%3E3%3C/text%3E%3Ctext x='165' y='436'%3E5%3C/text%3E%3Ctext x='165' y='458'%3E8%3C/text%3E%3Ctext x='165' y='480'%3E4%3C/text%3E%3Ctext x='165' y='502'%3E2%3C/text%3E%3Ctext x='165' y='524'%3E0%3C/text%3E%3Ctext x='165' y='546'%3E9%3C/text%3E%3Ctext x='165' y='568'%3E6%3C/text%3E%3Ctext x='165' y='590'%3E1%3C/text%3E%3Ctext x='165' y='612'%3E7%3C/text%3E%3Ctext x='165' y='634'%3E3%3C/text%3E%3Ctext x='165' y='656'%3E5%3C/text%3E%3Ctext x='240' y='110'%3E1%3C/text%3E%3Ctext x='240' y='132'%3E9%3C/text%3E%3Ctext x='240' y='154'%3E4%3C/text%3E%3Ctext x='240' y='176'%3E7%3C/text%3E%3Ctext x='240' y='198'%3E2%3C/text%3E%3Ctext x='240' y='220'%3E8%3C/text%3E%3Ctext x='240' y='242'%3E0%3C/text%3E%3Ctext x='240' y='264'%3E6%3C/text%3E%3Ctext x='240' y='286'%3E3%3C/text%3E%3Ctext x='240' y='308'%3E5%3C/text%3E%3Ctext x='240' y='330'%3E1%3C/text%3E%3Ctext x='240' y='352'%3E9%3C/text%3E%3Ctext x='240' y='374'%3E4%3C/text%3E%3Ctext x='240' y='396'%3E7%3C/text%3E%3Ctext x='240' y='418'%3E2%3C/text%3E%3Ctext x='240' y='440'%3E8%3C/text%3E%3Ctext x='240' y='462'%3E0%3C/text%3E%3Ctext x='240' y='484'%3E6%3C/text%3E%3Ctext x='240' y='506'%3E3%3C/text%3E%3Ctext x='240' y='528'%3E5%3C/text%3E%3Ctext x='240' y='550'%3E1%3C/text%3E%3Ctext x='240' y='572'%3E9%3C/text%3E%3Ctext x='240' y='594'%3E4%3C/text%3E%3Ctext x='240' y='616'%3E7%3C/text%3E%3Ctext x='240' y='638'%3E2%3C/text%3E%3Ctext x='240' y='660'%3E8%3C/text%3E%3Ctext x='315' y='55'%3E5%3C/text%3E%3Ctext x='315' y='77'%3E0%3C/text%3E%3Ctext x='315' y='99'%3E8%3C/text%3E%3Ctext x='315' y='121'%3E2%3C/text%3E%3Ctext x='315' y='143'%3E6%3C/text%3E%3Ctext x='315' y='165'%3E1%3C/text%3E%3Ctext x='315' y='187'%3E9%3C/text%3E%3Ctext x='315' y='209'%3E4%3C/text%3E%3Ctext x='315' y='231'%3E7%3C/text%3E%3Ctext x='315' y='253'%3E3%3C/text%3E%3Ctext x='315' y='275'%3E5%3C/text%3E%3Ctext x='315' y='297'%3E0%3C/text%3E%3Ctext x='315' y='319'%3E8%3C/text%3E%3Ctext x='315' y='341'%3E2%3C/text%3E%3Ctext x='315' y='363'%3E6%3C/text%3E%3Ctext x='315' y='385'%3E1%3C/text%3E%3Ctext x='315' y='407'%3E9%3C/text%3E%3Ctext x='315' y='429'%3E4%3C/text%3E%3Ctext x='315' y='451'%3E7%3C/text%3E%3Ctext x='315' y='473'%3E3%3C/text%3E%3Ctext x='315' y='495'%3E5%3C/text%3E%3Ctext x='315' y='517'%3E0%3C/text%3E%3Ctext x='315' y='539'%3E8%3C/text%3E%3Ctext x='315' y='561'%3E2%3C/text%3E%3Ctext x='315' y='583'%3E6%3C/text%3E%3Ctext x='315' y='605'%3E1%3C/text%3E%3Ctext x='315' y='627'%3E9%3C/text%3E%3Ctext x='315' y='649'%3E4%3C/text%3E%3Ctext x='390' y='90'%3E2%3C/text%3E%3Ctext x='390' y='112'%3E7%3C/text%3E%3Ctext x='390' y='134'%3E0%3C/text%3E%3Ctext x='390' y='156'%3E5%3C/text%3E%3Ctext x='390' y='178'%3E9%3C/text%3E%3Ctext x='390' y='200'%3E3%3C/text%3E%3Ctext x='390' y='222'%3E6%3C/text%3E%3Ctext x='390' y='244'%3E1%3C/text%3E%3Ctext x='390' y='266'%3E8%3C/text%3E%3Ctext x='390' y='288'%3E4%3C/text%3E%3Ctext x='390' y='310'%3E2%3C/text%3E%3Ctext x='390' y='332'%3E7%3C/text%3E%3Ctext x='390' y='354'%3E0%3C/text%3E%3Ctext x='390' y='376'%3E5%3C/text%3E%3Ctext x='390' y='398'%3E9%3C/text%3E%3Ctext x='390' y='420'%3E3%3C/text%3E%3Ctext x='390' y='442'%3E6%3C/text%3E%3Ctext x='390' y='464'%3E1%3C/text%3E%3Ctext x='390' y='486'%3E8%3C/text%3E%3Ctext x='390' y='508'%3E4%3C/text%3E%3Ctext x='390' y='530'%3E2%3C/text%3E%3Ctext x='390' y='552'%3E7%3C/text%3E%3Ctext x='390' y='574'%3E0%3C/text%3E%3Ctext x='390' y='596'%3E5%3C/text%3E%3Ctext x='390' y='618'%3E9%3C/text%3E%3Ctext x='390' y='640'%3E3%3C/text%3E%3Ctext x='390' y='662'%3E6%3C/text%3E%3C/g%3E%3C/svg%3E");
+
+    background-repeat: repeat;
+    background-size: 520px 700px;
+
+    pointer-events: none;
+
+    animation: matrixVertical 7s linear infinite;
+}
+
+@keyframes matrixVertical {
+    from {
+        background-position: 0 -700px;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+.experimento > * {
+    position: relative;
+    z-index: 1;
+}
+
+ /* ===== ENFOQUE DE TARJETAS ===== */
+
+.experimento-card {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.experimento-card:hover {
+    transform: translateY(-10px) scale(1.025);
+    border-color: #00A8FF;
+    box-shadow:
+        0 0 18px rgba(0,168,255,0.35),
+        0 0 45px rgba(0,168,255,0.12);
+} 
+
+/* ===== CONEXIÓN REAL TARJETA → CONCEPTO ===== */
+
+.experimento-opciones:has(.experimento-card:nth-child(1):hover)
++ .experimento-conceptos .concepto-card:nth-child(1),
+
+.experimento-opciones:has(.experimento-card:nth-child(2):hover)
++ .experimento-conceptos .concepto-card:nth-child(2),
+
+.experimento-opciones:has(.experimento-card:nth-child(3):hover)
++ .experimento-conceptos .concepto-card:nth-child(3) {
+    transform: translateY(-8px) scale(1.02);
+    border-color: #00A8FF;
+    box-shadow:
+        0 0 20px rgba(0,168,255,0.45),
+        0 0 50px rgba(0,168,255,0.15);
+}
+
+.concepto-card {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* ===== LÍNEAS DE ENERGÍA ===== */
+
+.concepto-card h4 {
+    position: relative;
+}
+
+.concepto-card h4::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: calc(100% + 22px);
+
+    width: 2px;
+    height: 70px;
+
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: bottom;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #00A8FF
+    );
+
+    opacity: 0;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+
+    box-shadow:
+        0 0 8px rgba(0,168,255,0.8),
+        0 0 18px rgba(0,168,255,0.4);
+
+    pointer-events: none;
+}
+
+.experimento-opciones:has(.experimento-card:nth-child(1):hover)
++ .experimento-conceptos .concepto-card:nth-child(1) h4::before,
+
+.experimento-opciones:has(.experimento-card:nth-child(2):hover)
++ .experimento-conceptos .concepto-card:nth-child(2) h4::before,
+
+.experimento-opciones:has(.experimento-card:nth-child(3):hover)
++ .experimento-conceptos .concepto-card:nth-child(3) h4::before {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+}
+  
+/* ===== PRUEBA DE EXPANSIÓN ===== */
+
+.experimento-detalle {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 1px solid transparent;
+
+    transition:
+        max-height 0.5s ease,
+        opacity 0.4s ease,
+        margin-top 0.5s ease,
+        padding-top 0.5s ease;
+}
+
+.experimento-card:hover .experimento-detalle {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top-color: rgba(255,255,255,0.12);
+}
+
+.experimento-card:active .experimento-detalle {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top-color: rgba(255,255,255,0.12);
+}  
+
+.experimento-opciones {
+    align-items: start;
+}  
   
 </style>
 
@@ -960,18 +1504,140 @@ Mi trabajo es hacer que sea memorable.
 
 <!-- FIN PROYECTOS -->
 
+<section class="experimento">
+
+    <div class="experimento-etiqueta">
+        EXPERIMENTO
+    </div>
+
+    <div class="experimento-intro">
+        <h2>¿Qué puede surgir cuando conectamos dos mundos?</h2>
+        <p>
+            Gastronomía • Tecnología • Inteligencia Artificial
+        </p>
+    </div>
+
+    <div class="experimento-opciones">
+
+        <div class="experimento-card">
+
+            <span>01</span>
+
+            <h3>Gastronomía × IA</h3>
+
+            <p>
+                <p>
+    Explorar nuevas formas de crear, pensar y desarrollar experiencias gastronómicas.
+                </p>
+            </p>
+
+            <strong>→</strong>
+
+            <div class="experimento-detalle">
+
+                <h4>IDEA HUMANA</h4>
+
+                <p>
+                    <p>
+    ¿Qué ocurre cuando la creatividad humana y la inteligencia artificial trabajan juntas?
+                    </p>
+                </p>
+
+                <h4>+ IA</h4>
+
+                <p>
+                    La inteligencia artificial ayuda a explorar nuevas posibilidades.
+                </p>
+
+                <h4>NUEVO CONCEPTO</h4>
+
+                <p>
+                    La combinación puede abrir caminos que antes no habíamos imaginado.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="experimento-card">
+
+            <span>02</span>
+
+            <h3>Tecnología × Creatividad</h3>
+
+            <p>
+                ¿Cómo puede la tecnología convertir una idea en una nueva experiencia?
+            </p>
+
+            <strong>→</strong>
+
+        </div>
+
+        <div class="experimento-card">
+
+            <span>03</span>
+
+            <h3>IA × Proyectos</h3>
+
+            <p>
+                De una idea a un proyecto ¿hasta dónde puede llevarnos la inteligencia artificial?
+            </p>
+
+            <strong>→</strong>
+
+        </div>
+
+    </div>
+
+
+   <div class="experimento-conceptos">
+
+        <div class="concepto-card">
+            <h4>EXPLORAR</h4>
+            <p>
+                Nuevas posibilidades aparecen cuando conectamos conocimiento, creatividad y tecnología.
+            </p>
+        </div>
+
+        <div class="concepto-card">
+            <h4>TRANSFORMAR</h4>
+            <p>
+                Una idea puede convertirse en una experiencia, una herramienta o una nueva forma de hacer las cosas.
+            </p>
+        </div>
+
+        <div class="concepto-card">
+            <h4>CONSTRUIR</h4>
+            <p>
+                La inteligencia artificial puede llevarnos de una idea a un proyecto que imaginamos para 2050.
+            </p>
+        </div>
+
+   </div>
+
+      <div class="experimento-cierre">
+        <p>
+            Algunas ideas empiezan como un experimento. Otras terminan convirtiéndose en algo real.
+        </p>
+      </div>
+
+</section>
+
+
+
+
 <div class="video-presentacion">
     <video autoplay muted loop playsinline>
         <source src="fuegov.mp4" type="video/mp4">
     </video>
-</>
+</div>
 
 <div class="video-presentacion video-salmon">
 <video autoplay muted loop playsinline>
 <source src="samurai.1.mp4" type="video/mp4">
 </video>
 <button class="boton-sonido" type="button">🔊</button>
-</>
+</div>
 </>
 
 <h2 class="galeria-titulo">Galería</h2>
@@ -1437,12 +2103,28 @@ if (fraseProyecto) {
     fraseProyecto.textContent =
     "Crio e conecto ideias que normalmente não se encontram.";
 }
+  
 
-const subtituloProyecto = document.querySelector(".proyectos-frase span");
+const experimentoCards = document.querySelectorAll(".experimento-card");
 
-if (subtituloProyecto) {
-    subtituloProyecto.textContent =
-    "Gastronomia • Tecnologia • Inteligência Artificial";
-}  
+experimentoCards.forEach(function(card) {
+
+    card.addEventListener("click", function() {
+
+        card.classList.toggle("ativo");
+
+        const detalle = card.querySelector(".experimento-detalle");
+
+        if (detalle) {
+            detalle.style.display =
+                card.classList.contains("ativo") ? "block" : "none";
+  }
+
+    });
+
+});
+
+  
+  
   
 </script>
