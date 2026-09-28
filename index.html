@@ -834,6 +834,9 @@ p.texto-abajo {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+
+  
+
 .experimento-detalle h4 {
     color: #00A8FF;
     font-size: 14px;
@@ -848,9 +851,7 @@ p.texto-abajo {
     margin: 0;
 }
 
-.experimento-card.ativo .experimento-detalle {
-    display: block;
-}
+
   
 .experimento-conceptos {
     max-width: 900px;
@@ -1059,6 +1060,7 @@ p.texto-abajo {
 
     .concepto-card p {
         font-size: 19px;
+        
     }
 
     .experimento-cierre {
@@ -1267,13 +1269,7 @@ p.texto-abajo {
         padding-top 0.5s ease;
 }
 
-.experimento-card:hover .experimento-detalle {
-    max-height: 500px;
-    opacity: 1;
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top-color: rgba(255,255,255,0.12);
-}
+
 
 .experimento-card:focus .experimento-detalle {
     max-height: 500px;
@@ -1305,6 +1301,494 @@ p.texto-abajo {
         0 0 20px rgba(0,168,255,0.45),
         0 0 50px rgba(0,168,255,0.15);
 }  
+
+/* ===== LABORATORIO — ESTADO INICIAL ===== */
+
+.experimento-opciones .experimento-card:nth-child(2),
+.experimento-opciones .experimento-card:nth-child(3),
+.experimento-conceptos {
+    display: none;
+}
+
+  
+/* ===== NÚCLEO CENTRAL DEL EXPERIMENTO ===== */
+
+.experimento-opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experimento-opciones .experimento-card:first-child {
+    width: 230px;
+    min-height: 170px;
+    position: relative;
+    border-color: #00A8FF;
+    box-shadow:
+        0 0 15px rgba(0,168,255,0.35),
+        0 0 45px rgba(0,168,255,0.12);
+}
+
+
+.experimento-opciones .experimento-card:first-child::after {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border: 1px solid rgba(0,168,255,0.35);
+    border-radius: 18px;
+    opacity: 0.7;
+    animation: pulsoNucleo 2.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulsoNucleo {
+    0%, 100% {
+        transform: scale(0.96);
+        opacity: 0.25;
+    }
+    50% {
+        transform: scale(1.04);
+        opacity: 0.75;
+    }
+  }
+  
+
+/* ===== DESPERTAR DEL LABORATORIO ===== */
+
+.experimento-opciones {
+    position: relative;
+    min-height: 300px;
+}
+
+.experimento-opciones .experimento-card:nth-child(2),
+.experimento-opciones .experimento-card:nth-child(3) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 230px;
+    min-height: 170px;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.8s ease;
+}
+
+/* 02 aparece a la izquierda */
+
+.experimento-opciones .experimento-card:nth-child(2) {
+    left: 0;
+    transform: translate(-40px, -50%);
+}
+
+/* 03 aparece a la derecha */
+
+.experimento-opciones .experimento-card:nth-child(3) {
+    right: 0;
+    transform: translate(40px, -50%);
+}
+
+/* ===== SISTEMA ACTIVADO ===== */
+
+.experimento-opciones:has(.experimento-card.ativo)
+.experimento-card:nth-child(2),
+.experimento-opciones:has(.experimento-card.ativo)
+.experimento-card:nth-child(3) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.experimento-opciones:has(.experimento-card:first-child.ativo)
+.experimento-card:nth-child(2) {
+    transform: translate(0, -50%) scale(1);
+    box-shadow:
+        0 0 18px rgba(0,168,255,0.25),
+        0 0 40px rgba(0,168,255,0.08);
+}
+
+.experimento-opciones:has(.experimento-card:nth-child(2).ativo)
+.experimento-card:nth-child(2) {
+    border-color: #00A8FF;
+    box-shadow:
+        0 0 25px rgba(0,168,255,0.5),
+        0 0 60px rgba(0,168,255,0.18);
+}  
+  
+
+.experimento-opciones:has(.experimento-card:first-child.ativo)
+.experimento-card:nth-child(3) {
+    transform: translate(0, -50%) scale(1);
+    box-shadow:
+        0 0 18px rgba(0,168,255,0.25),
+        0 0 40px rgba(0,168,255,0.08);
+}
+
+ .experimento-opciones:has(.experimento-card:nth-child(3).ativo)
+.experimento-card:nth-child(3) {
+    border-color: #00A8FF;
+    box-shadow:
+        0 0 25px rgba(0,168,255,0.5),
+        0 0 60px rgba(0,168,255,0.18);
+} 
+
+/* ===== CONEXIONES 02 — NODOS ===== */
+
+.experimento-conexiones-02 {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.conexao-node {
+    position: absolute;
+    width: 105px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(5, 5, 5, 0.92);
+    border: 1px solid rgba(0,168,255,0.45);
+    border-radius: 10px;
+
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    opacity: 0;
+    transform: scale(0.7);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        border-color 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+.node-ideia {
+    left: 12%;
+    top: 15%;
+}
+
+.node-tecnologia {
+    left: 8%;
+    top: 70%;
+}
+
+.node-experiencia {
+    left: 28%;
+    top: 82%;
+}  
+
+/* ===== SISTEMA DE CONEXIONES — 02 ===== */
+
+.experimento-conexiones-02 {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Nodos ocultos inicialmente */
+.experimento-conexiones-02 .conexao-node {
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #050505;
+    border: 1px solid rgba(0,168,255,0.45);
+    border-radius: 10px;
+
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    opacity: 0;
+    transform: scale(0.7);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+/* Posiciones */
+.experimento-conexiones-02 .node-ideia {
+    left: 4%;
+    top: 20%;
+}
+
+.experimento-conexiones-02 .node-tecnologia {
+    left: 3%;
+    top: 48%;
+}
+
+.experimento-conexiones-02 .node-experiencia {
+    left: 16%;
+    top: 76%;
+}
+
+
+/* ===== DESPERTAR CUANDO 02 ESTÁ ACTIVO ===== */
+
+.experimento-opciones:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .node-ideia {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.5s;
+    border-color: #ff3030;
+    box-shadow:
+        0 0 8px rgba(255,48,48,0.7),
+        0 0 20px rgba(255,48,48,0.25);
+}
+
+.experimento-opciones:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .node-tecnologia {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 1s;
+    border-color: #ff3030;
+    box-shadow:
+        0 0 8px rgba(255,48,48,0.7),
+        0 0 20px rgba(255,48,48,0.25);
+}
+
+.experimento-opciones:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .node-experiencia {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 1.5s;
+    
+    border-color: #ff3030;
+    box-shadow:
+        0 0 8px rgba(255,48,48,0.7),
+        0 0 20px rgba(255,48,48,0.25);
+}
+
+/* ===== PRUEBA DIRECTA DE LAS CÁPSULAS ===== */
+
+body:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .conexao-node {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    border-color: #ff3030 !important;
+    box-shadow:
+        0 0 8px rgba(255,48,48,0.8),
+        0 0 25px rgba(255,48,48,0.4) !important;
+} 
+
+/* ===== POSICIÓN DEL SISTEMA 02 ===== */
+
+.experimento-conexiones-02 .node-ideia {
+    left: 30%;
+    top: 8%;
+}
+
+.experimento-conexiones-02 .node-tecnologia {
+    left: 42%;
+    top: 43%;
+}
+
+.experimento-conexiones-02 .node-experiencia {
+    left: 30%;
+    top: 78%;
+}  
+
+/* ===== LÍNEAS DE ENERGÍA — SISTEMA 02 ===== */
+
+.experimento-conexiones-02 .conexao-linha {
+    position: absolute;
+    height: 2px;
+    background: #ff3030;
+    box-shadow:
+        0 0 6px rgba(255,48,48,0.9),
+        0 0 15px rgba(255,48,48,0.45);
+
+    transform-origin: left center;
+    opacity: 0;
+    z-index: 4;
+    animation: pulsoEnergia 1.8s ease-in-out infinite;
+}
+
+/* IDEA → TECNOLOGÍA */
+
+.experimento-conexiones-02 .linha-ideia {
+    width: 115px;
+    left: 30%;
+    top: 17%;
+    --angulo: 35deg;
+    transform: rotate(35deg) scaleX(0);
+}
+
+/* TECNOLOGÍA → EXPERIENCIA */
+
+.experimento-conexiones-02 .linha-tecnologia {
+    width: 100px;
+    left: 45%;
+    top: 53%;
+    --angulo: 115deg;
+    transform: rotate(115deg) scaleX(0);
+}
+
+/* Activación */
+
+/* ===== ACTIVACIÓN DE LAS DOS LÍNEAS ===== */
+
+body:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .linha-ideia,
+body:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .linha-tecnologia {
+    opacity: 1;
+    animation: energia02 0.8s ease forwards;
+}
+
+body:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .linha-tecnologia {
+    animation-delay: 0.45s;
+}
+
+@keyframes energia02 {
+    from {
+        transform: rotate(var(--angulo, 0deg)) scaleX(0);
+    }
+
+    to {
+        transform: rotate(var(--angulo, 0deg)) scaleX(1);
+    }
+}
+
+  
+/* ===== CONEXIÓN TECNOLOGÍA → EXPERIENCIA ===== */
+
+body:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .linha-tecnologia {
+    opacity: 1;
+    width: 85px;
+    left: 48%;
+    top: 53%;
+    transform: rotate(125deg) scaleX(1);
+    animation: nenhuma 0s;
+}
+
+@keyframes nenhuma {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulsoEnergia {
+    0%, 100% {
+        opacity: 0.45;
+        filter: brightness(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        filter: brightness(1.8);
+    }
+}
+  
+/* ===== INDICADOR DE ACTIVACIÓN ===== */
+
+.experimento-conexiones-02 .conexao-node::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #ff3030;
+    box-shadow:
+        0 0 6px rgba(255,48,48,0.9),
+        0 0 14px rgba(255,48,48,0.5);
+
+    animation: pulsoNodo 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsoNodo {
+    0%, 100% {
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+}
+
+/* ===== DESTELLO FINAL — EXPERIENCIA ===== */
+
+@keyframes destelloExperiencia {
+    0% {
+        box-shadow:
+            0 0 8px rgba(255,48,48,0.7),
+            0 0 20px rgba(255,48,48,0.25);
+    }
+
+    45% {
+        box-shadow:
+            0 0 18px rgba(255,48,48,1),
+            0 0 45px rgba(255,48,48,0.8),
+            0 0 80px rgba(255,48,48,0.35);
+    }
+
+    100% {
+        box-shadow:
+            0 0 8px rgba(255,48,48,0.7),
+            0 0 20px rgba(255,48,48,0.25);
+    }
+}  
+
+/* ===== ACTIVACIÓN FINAL — EXPERIENCIA ===== */
+
+.experimento-conexiones-02 .node-experiencia::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #ff3030;
+box-shadow:
+    0 0 10px rgba(255,48,48,0.9),
+    0 0 25px rgba(255,48,48,0.7),
+    0 0 50px rgba(255,48,48,0.4);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.3);
+    pointer-events: none;
+}
+
+body:has(.experimento-card:nth-child(2).ativo)
+.experimento-conexiones-02 .node-experiencia::after {
+    animation: pulsoExperiencia 1s ease-out 1s;
+}
+
+@keyframes pulsoExperiencia {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+    opacity: 0.12;
+    transform: scale(2.1);
+    }
+}
+  
   
 </style>
 
@@ -1542,12 +2026,12 @@ Mi trabajo es hacer que sea memorable.
 
             <span>01</span>
 
-            <h3>Gastronomía × IA</h3>
+            <h3>EXPLORAR</h3>
 
             <p>
-                <p>
-    Explorar nuevas formas de crear, pensar y desarrollar experiencias gastronómicas.
-                </p>
+                
+    Conectar → descubrir → crear
+                
             </p>
 
             <strong>→</strong>
@@ -1557,9 +2041,9 @@ Mi trabajo es hacer que sea memorable.
                 <h4>IDEA HUMANA</h4>
 
                 <p>
-                    <p>
+                    
     ¿Qué ocurre cuando la creatividad humana y la inteligencia artificial trabajan juntas?
-                    </p>
+                    
                 </p>
 
                 <h4>+ IA</h4>
@@ -1611,6 +2095,26 @@ Mi trabajo es hacer que sea memorable.
 
     </div>
 
+  <div class="experimento-conexiones-02">
+
+    <div class="conexao-linha linha-ideia"></div>
+    <div class="conexao-linha linha-tecnologia"></div>
+    <div class="conexao-linha linha-experiencia"></div>
+
+    <div class="conexao-node node-ideia">
+        <span>IDEA</span>
+    </div>
+
+    <div class="conexao-node node-tecnologia">
+        <span>TECNOLOGÍA</span>
+    </div>
+
+    <div class="conexao-node node-experiencia">
+        <span>EXPERIENCIA</span>
+    </div>
+
+  </div>
+
 
    <div class="experimento-conceptos">
 
@@ -1636,6 +2140,8 @@ Mi trabajo es hacer que sea memorable.
         </div>
 
    </div>
+
+  
 
       <div class="experimento-cierre">
         <p>
