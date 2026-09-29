@@ -19,7 +19,7 @@ h1 {
 
   
 h2 {
-    color: #00A8FF;
+    color: #ff3030;
     
 }
 
@@ -71,7 +71,7 @@ p.vision-futura.texto-arriba {
     display: block;
     width: 60px;
     height: 3px;
-    background: #00A8FF;
+    background: #ff3030;
     margin: 18px auto 0;
 }
 
@@ -93,7 +93,7 @@ p.vision-futura.texto-arriba {
 }
 
 .texto-abajo h2 {
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 50px;
 }
   
@@ -136,6 +136,18 @@ h3 {
     margin-bottom: 30px;
 }
 
+
+@keyframes luzCinematica {
+    0%, 55% {
+        left: -30%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+  
+
 .creator-photo img {
     display: block;
     width: 105%;
@@ -167,8 +179,8 @@ h3 {
 }
 
 .creator-overlay h2 {
-    color: #00A8FF;
-    font-size: 50px;
+    color: #ffffff !important;
+    font-size: 40px;
     margin-bottom: 15px;
 }
 
@@ -181,19 +193,21 @@ font-style: italic;
 
 .conocer-btn {
     display: inline-block;
-    background: #00A8FF;
-    color: white;
+    background: transparent;
+    color: #ff3030;
     text-decoration: none;
-    padding: 18px 36px;
-    border-radius: 10px;
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    box-shadow: 0 0 20px rgba(0, 168, 255, 0.35)
+    padding: 12px 28px;
+    border: 1px solid #ff3030;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: 0 0 6px rgba(255,48,48,0.25);
+    animation: pulsoProyectos 2.5s ease-in-out infinite;
 }
 
 .conocer-btn:hover {
-    background: #0088CC;
+    background: #cc2020;
 }
 
 .social-buttons {
@@ -222,7 +236,24 @@ font-style: italic;
    margin: 0 auto 50px auto;
    border-radius: 15px;
    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+   position: relative;
 }
+
+
+.foto-portada {
+    animation: movimientoSutil 8s ease-in-out infinite alternate;
+}
+
+@keyframes movimientoSutil {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.018);
+    }
+}
+
 
 .social-buttons a {
     color: white;
@@ -250,8 +281,8 @@ font-style: italic;
 }  
 
 .social-buttons a:hover {
-    color: #00A8FF !important;
-    border-color: #00A8FF;
+    color: #ff3030 !important;
+    border-color: #ff3030;
 }
 
 .carrusel-fotos {
@@ -291,7 +322,7 @@ transform: translateX(-1370px);
 }
 
 .frase-impacto {
-    background: #0066cc;
+    background: transparente;
     text-align: center;
     padding: 15px 20px;
     margin: 80px 0;
@@ -315,7 +346,7 @@ transform: translateX(-1370px);
     margin: 100px 0;
     padding: 50px 30px;
     text-align: center;
-    border: 1px solid #00A8FF;
+    border: 1px solid #ff3030;
     border-radius: 12px;
 }
 
@@ -337,10 +368,12 @@ transform: translateX(-1370px);
 
 .experiencia-item {
     margin: 0 auto 15px;
-    padding: 4px 30px;
+    padding: 14px 30px;
     border-radius: 50px;
     box-sizing: border-box;
     max-width: 750px;
+    background: transparent !important;
+    border: 1px solid #ff3030;
 }
 
 .experiencia-negra {
@@ -362,18 +395,18 @@ transform: translateX(-1370px);
 }
 
 .experiencia-blanca {
-    background: white;
+    background: transparente;
 }
 
 .experiencia-blanca h3 {
-    color: #00A8FF;
+    color: wite;
     font-size: 30px;
     margin-bottom: 15px;
 }
 
 .experiencia-negra p,
 .experiencia-blanca p {
-    color: #00A8FF;
+    color: wite;
     font-size: 20px;
     max-width: 500px;
     margin: 0 auto;
@@ -393,9 +426,9 @@ transform: translateX(-1370px);
 
 .proyectos-etiqueta {
     display: inline-block;
-    background: white;
-    color: #00A8FF;
-    font-size: 30px;
+    background: transparente;
+    color: #ff3030;
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: 2px;
     padding: 12px 28px;
@@ -403,7 +436,20 @@ transform: translateX(-1370px);
     position: relative;
     z-index: 5;
     border-radius: 50px;
+    border: 1px solid #ff3030;
+box-shadow: 0 0 8px rgba(255,48,48,0.35);
+animation: pulsoProyectos 2.5s ease-in-out infinite;
 }
+
+@keyframes pulsoProyectos {
+    0%, 100% {
+        box-shadow: 0 0 6px rgba(255,48,48,0.25);
+    }
+
+    50% {
+        box-shadow: 0 0 16px rgba(255,48,48,0.55);
+    }
+}  
 
 .proyectos-etiqueta {
     opacity: 0;
@@ -421,7 +467,9 @@ transform: translateX(-1370px);
     max-width: 1100px;
     margin: 0 auto;
     overflow: hidden;
-    border: 1px solid #00A8FF;
+    border: 1px solid #ff3030;
+    box-shadow: 0 0 6px rgba(255,48,48,0.25);
+animation: pulsoProyectos 2.5s ease-in-out infinite;
 }
 
 .proyectos-imagen img {
@@ -444,20 +492,20 @@ transform: translateX(-1370px);
 }
 
 .proyecto-bloque span {
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 15px;
     letter-spacing: 2px;
 }
 
 .proyecto-bloque h3 {
-    color: white;
+    color: #ff3030;
     font-size: 30px;
     margin: 8px 0 10px;
 }
 
 .proyecto-bloque p {
     color: white;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 1.45;
     margin: 0;
 }
@@ -525,7 +573,7 @@ transform: translateX(-1370px);
 
 .proyectos-frase span {
     display: block;
-    color: #00A8FF;
+    color: white;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -621,14 +669,14 @@ body::before {
 .experiencias {
     position: relative;
     overflow: hidden;
-    background: #0066cc;
-    border: 1px solid #0066cc;
+    background: transparente;
+    border: none;
 }
 
 /* BLOQUE EXPERIENCIAS - AZUL */
 .experiencias {
-    background: #0066CC;
-    border: 1px solid #0066cc;
+    background: transparente;
+    border: none;
 }
 
 .experiencias h2 {
@@ -717,8 +765,8 @@ body::before {
 }
 
 .beyond-kitchen h2 {
-    color: #00A8FF;
-    font-size: 33px;
+    color: #ff3030;
+    font-size: 25px;
     margin-bottom: 15px;
 }
 
@@ -748,8 +796,8 @@ p.texto-abajo {
 
 .experimento-etiqueta {
     display: inline-block;
-    background: white;
-    color: #00A8FF;
+    background: transparente;
+    color: #ff3030;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -771,7 +819,7 @@ p.texto-abajo {
 }
 
 .experimento-intro p {
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -793,10 +841,11 @@ p.texto-abajo {
     border-radius: 12px;
     text-align: left;
     box-sizing: border-box;
+    
 }
 
 .experimento-card span {
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 15px;
     letter-spacing: 2px;
 }
@@ -819,7 +868,7 @@ p.texto-abajo {
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 30px;
     font-weight: 400;
 }
@@ -838,7 +887,7 @@ p.texto-abajo {
   
 
 .experimento-detalle h4 {
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 14px;
     letter-spacing: 2px;
     margin: 18px 0 8px;
@@ -871,7 +920,7 @@ p.texto-abajo {
 }
 
 .concepto-card h4 {
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 20px;
     letter-spacing: 2px;
     margin: 0 0 16px;
@@ -912,7 +961,7 @@ p.texto-abajo {
 .experimento-card {
     min-height: 250px;
     background: #050505;
-    border: 1px solid rgba(0,168,255,0.35);
+    border: 1px solid rgba(255,48,48,0.35);
     border-radius: 14px;
     padding: 28px 28px 32px;
     text-align: left;
@@ -922,11 +971,11 @@ p.texto-abajo {
 
 .experimento-card:hover {
     transform: translateY(-8px);
-    border-color: #00A8FF;
+    border-color: #ff3030;
 }
 
 .experimento-card span {
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 14px;
     letter-spacing: 3px;
 }
@@ -951,7 +1000,7 @@ p.texto-abajo {
     bottom: 20px;
     top: auto;
     transform: none;
-    color: #00A8FF;
+    color: #ff3030;
     font-size: 28px;
     font-weight: 400;
 }
@@ -1171,10 +1220,10 @@ p.texto-abajo {
 
 .experimento-card:hover {
     transform: translateY(-10px) scale(1.025);
-    border-color: #00A8FF;
+    border-color: #ff3030 !important;
     box-shadow:
-        0 0 18px rgba(0,168,255,0.35),
-        0 0 45px rgba(0,168,255,0.12);
+    0 0 18px rgba(255,48,48,0.35),
+    0 0 45px rgba(255,48,48,0.12);
 } 
 
 /* ===== CONEXIÓN REAL TARJETA → CONCEPTO ===== */
@@ -1188,10 +1237,10 @@ p.texto-abajo {
 .experimento-opciones:has(.experimento-card:nth-child(3):hover)
 + .experimento-conceptos .concepto-card:nth-child(3) {
     transform: translateY(-8px) scale(1.02);
-    border-color: #00A8FF;
+    border-color: #ff3030;
     box-shadow:
-        0 0 20px rgba(0,168,255,0.45),
-        0 0 50px rgba(0,168,255,0.15);
+        0 0 20px rgba(255,48,48,0.45),
+0 0 50px rgba(255,48,48,0.15);
 }
 
 .concepto-card {
@@ -1223,7 +1272,7 @@ p.texto-abajo {
     background: linear-gradient(
         to bottom,
         transparent,
-        #00A8FF
+        #ff3030
     );
 
     opacity: 0;
@@ -1296,7 +1345,7 @@ p.texto-abajo {
 }  
 
 .experimento-card.ativo {
-    border-color: #00A8FF;
+    border-color: #ff3030;
     box-shadow:
         0 0 20px rgba(0,168,255,0.45),
         0 0 50px rgba(0,168,255,0.15);
@@ -1323,7 +1372,7 @@ p.texto-abajo {
     width: 230px;
     min-height: 170px;
     position: relative;
-    border-color: #00A8FF;
+    border-color: #ff3030;
     box-shadow:
         0 0 15px rgba(0,168,255,0.35),
         0 0 45px rgba(0,168,255,0.12);
@@ -1789,6 +1838,297 @@ body:has(.experimento-card:nth-child(2).ativo)
     }
 }
   
+.separador-rojo {
+    width: 90px;
+    height: 2px;
+    background: #ff3030;
+    margin: 45px auto;
+    box-shadow: 0 0 10px rgba(255, 48, 48, 0.5);
+}
+
+.experiencia-item {
+    background: transparent !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.experiencia-item h3 {
+    color: white !important;
+}
+
+.experiencia-item p {
+    color: white !important;
+}
+
+.galeria-experiencia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 25px;
+}
+
+.foto-experiencia {
+    position: relative;
+    overflow: hidden;
+    background: #050505;
+}
+
+.foto-experiencia img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    background: #050505;
+    transition: transform 0.8s ease;
+}
+
+.foto-experiencia:hover img,
+.foto-experiencia:focus img {
+    transform: scale(1.08);
+}
+
+  
+
+.foto-experiencia span {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    z-index: 2;
+}
+
+.foto-principal {
+    grid-column: span 2;
+}
+
+.foto-principal img {
+    height: 600px;
+    object-fit: contain;
+}
+
+.foto-final {
+    grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+
+    .galeria-experiencia {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .foto-experiencia,
+    .foto-principal,
+    .foto-final {
+        grid-column: span 1;
+    }
+
+    .foto-experiencia img,
+    .foto-principal img {
+        height: 420px;
+    }
+}
+  
+
+/* REVELACIÓN DE GALERÍA */
+
+.foto-experiencia {
+    opacity: 0;
+    transform: translateY(80px) scale(0.88);
+    animation: revelarFoto linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
+}
+
+@keyframes revelarFoto {
+    from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.88);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1.03);
+    }
+}
+
+
+ .galeria-experiencia {
+    position: relative;
+}
+
+.foto-experiencia::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    width: 0;
+    height: 1px;
+    background: #ff3030;
+    box-shadow: 0 0 8px rgba(255, 48, 48, 0.6);
+    animation: lineaFoto linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 45%;
+}
+
+@keyframes lineaFoto {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 45px;
+    }
+}
+
+/* RITMO VISUAL DE LA GALERÍA */
+
+.galeria-experiencia .foto-experiencia:nth-child(2) {
+    margin-top: 35px;
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(3) {
+    margin-top: -20px;
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(5) {
+    margin-top: 30px;
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(6) {
+    margin-top: -25px;
+}
+
+@media (max-width: 700px) {
+
+    .galeria-experiencia .foto-experiencia:nth-child(2),
+    .galeria-experiencia .foto-experiencia:nth-child(3),
+    .galeria-experiencia .foto-experiencia:nth-child(5),
+    .galeria-experiencia .foto-experiencia:nth-child(6) {
+        margin-top: 0;
+    }
+
+}
+
+/* DATOS DE SISTEMA — GALERÍA */
+
+.galeria-experiencia .foto-experiencia:nth-child(1)::before {
+    content: "01 / ORIGEN";
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(2)::before {
+    content: "02 / TÉCNICA";
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(3)::before {
+    content: "03 / INFLUENCIA";
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(4)::before {
+    content: "04 / IDENTIDAD";
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(5)::before {
+    content: "05 / MATERIA";
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(6)::before {
+    content: "06 / EVOLUCIÓN";
+}
+
+.galeria-experiencia .foto-experiencia:nth-child(7)::before {
+    content: "07 / EXPERIENCIA";
+}
+
+.foto-experiencia::before {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    color: #ff3030;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    z-index: 4;
+
+    
+    animation-timeline: view();
+    animation-range: entry 15% cover 35%;
+}
+
+
+
+
+
+@keyframes cursorDato {
+    0%, 49% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}  
+  
+@keyframes cursorDato {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.firma-henry {
+    width: fit-content;
+    margin: 35px 0 45px 8%;
+    text-align: left;
+}
+
+.firma-nombre {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 0.78;
+    letter-spacing: -4px;
+}
+
+.firma-linea {
+    width: 55px;
+    height: 1px;
+    background: #ff3030;
+    margin: 18px 0 8px;
+    box-shadow: 0 0 8px rgba(255,48,48,0.5);
+}
+
+.firma-diaz {
+    color: rgba(255,255,255,0.65);
+    font-size: 11px;
+    letter-spacing: 7px;
+    margin: 0;
+}
+
+.firma-henry .vision-futura {
+    color: #ff3030;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 18px 0 0;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+/* Idiomas independientes — Experimento */
+
+.experimento-pt {
+    display: none;
+}  
   
 </style>
 
@@ -1797,15 +2137,27 @@ body:has(.experimento-card:nth-child(2).ativo)
     <button onclick="cambiarIdioma('es')">🇪🇸 ES</button>
 </div>
 
-<h1 class="texto-arriba">Henry Díaz</h1>
-<h2 class="texto-arriba">Chef peruano</h2>
-<h3 class="texto-arriba" data-es="Cocina peruana contemporánea • Nikkei" data-pt="Cozinha peruana contemporánea • Nikkei">Cocina peruana contemporánea • Nikkei</h3>
 
-<p class="vision-futura texto-arriba"
-data-es="Gastronomía • Tecnología • Inteligencia Artificial"
-data-pt="Gastronomia • Tecnologia • Inteligência Artificial">
-Gastronomía • Tecnología • Inteligencia Artificial
-</p>
+
+
+<div class="firma-henry">
+
+    <div class="firma-nombre">
+        <span>HE</span>
+        <span>NRY</span>
+    </div>
+
+    <div class="firma-linea"></div>
+
+    <div class="firma-diaz">DÍAZ</div>
+
+    <p class="vision-futura"
+    data-es="Gastronomía • Tecnología • Inteligencia Artificial"
+    data-pt="Gastronomia • Tecnologia • Inteligência Artificial">
+    Gastronomía • Tecnología • Inteligencia Artificial
+    </p>
+
+</div>
 
 <div class="carrusel-fotos">
 
@@ -1827,9 +2179,9 @@ Gastronomía • Tecnología • Inteligencia Artificial
 
 </div>
 
-<img src="Foto 1.jpg" alt="Henry Díaz"
-
-class="foto-portada">
+<div class="foto-portada-wrap">
+    <img src="Foto 1.jpg" alt="Henry Díaz" class="foto-portada">
+</div>
 
 <div class="creator-photo">
 <img src="yo finalizando.jpg" alt="Henry Díaz finalizando un plato">
@@ -1875,13 +2227,13 @@ TikTok
 <div class="presentacion" id="henry-diaz"
 style="padding-top:80px;"></div>
 <div class="texto-abajo">
-<h2>Henry Díaz</h2>
+
 
 
                                                                                     
   
 <p>
-  Soy Henry Díaz. Nací y crecí en Perú, donde la gastronomía se convirtió en una de las principales formas de expresar mi creatividad.
+  Nací y crecí en Perú, donde la gastronomía se convirtió en una de las principales formas de expresar mi creatividad.
 </p>
 
 <p>
@@ -1889,18 +2241,18 @@ style="padding-top:80px;"></div>
 </p>
 
 <p>
-  Pero mi camino no termina en la gastronomía. Mi curiosidad me lleva hacia la <strong>tecnología, la inteligencia artificial y la creación de nuevos proyectos</strong>.
+  Pero mi camino no termina en la gastronomía. Mi curiosidad me lleva hacia la <strong>tecnología y la creación de nuevos proyectos</strong>.
 </p>
 
 <p>
-  Hoy exploro cómo conectar estos mundos para transformar ideas en experiencias, herramientas y proyectos que ayudan a organizar procesos y optimizar resultados.
+  Hoy exploro cómo conectar estos mundos para transformar ideas en experiencias, herramientas y proyectos.
 </p>
 
 </div>
 
 <div class="texto-derecha">
   
-<h2 class="mi-cocina-titulo">Mi cocina</h2>
+<div class="separador-rojo"></div>
 
 <ul class="mi-cocina-lista">
   <li>Cocina peruana contemporánea</li>
@@ -1909,7 +2261,7 @@ style="padding-top:80px;"></div>
   <li>Experiencias gastronómicas privadas</li>
 </ul>
 </div>
-
+<div class="separador-rojo"></div>
 
 <div class="frase-impacto texto-izquierda">
 
@@ -1920,7 +2272,7 @@ Mi trabajo es hacer que sea memorable.
 </p>
 </div>
 
-
+<div class="separador-rojo"></div>
 
 <div class="experiencias">
 
@@ -1931,13 +2283,15 @@ Mi trabajo es hacer que sea memorable.
     <p>Una experiencia gastronómica personalizada, creada para cada ocasión.</p>
 </div>
 
-
+<div class="separador-rojo"></div>
 
 <div class="experiencia-item experiencia-blanca experiencia-2 texto-abajo">
     <h3>Cocina peruana & Nikkei</h3>
     <p>Sabores, técnica y creatividad inspirados en la cultura peruana y en sus influencias.</p>
 </div>
-
+  
+<div class="separador-rojo"></div>
+  
 <div class="experiencia-item experiencia-negra experiencia-3 texto-abajo">
     <h3>Experiencias</h3>
     <p>Una propuesta gastronómica diseñada para convertir cada encuentro en una experiencia.</p>
@@ -1999,7 +2353,7 @@ Mi trabajo es hacer que sea memorable.
 
 
     <div class="proyectos-frase">
-    <p>Creo y conecto ideas que normalmente no se encuentran.</p>
+    
     <span>Gastronomía • Tecnología • Inteligencia Artificial</span>
     </div>
 
@@ -2007,7 +2361,9 @@ Mi trabajo es hacer que sea memorable.
 
 <!-- FIN PROYECTOS -->
 
-<section class="experimento">
+<!-- ==================== EXPERIMENTO ES ==================== -->
+
+<section class="experimento experimento-es">
 
     <div class="experimento-etiqueta">
         EXPERIMENTO
@@ -2015,141 +2371,180 @@ Mi trabajo es hacer que sea memorable.
 
     <div class="experimento-intro">
         <h2>¿Qué puede surgir cuando conectamos dos mundos?</h2>
-        <p>
-            Gastronomía • Tecnología • Inteligencia Artificial
-        </p>
+        <p>Gastronomía • Tecnología • Inteligencia Artificial</p>
     </div>
 
     <div class="experimento-opciones">
 
         <div class="experimento-card">
-
             <span>01</span>
-
             <h3>EXPLORAR</h3>
-
-            <p>
-                
-    Conectar → descubrir → crear
-                
-            </p>
-
+            <p>Conectar → descubrir → crear</p>
             <strong>→</strong>
 
             <div class="experimento-detalle">
-
                 <h4>IDEA HUMANA</h4>
-
-                <p>
-                    
-    ¿Qué ocurre cuando la creatividad humana y la inteligencia artificial trabajan juntas?
-                    
-                </p>
+                <p>¿Qué ocurre cuando la creatividad humana y la inteligencia artificial trabajan juntas?</p>
 
                 <h4>+ IA</h4>
-
-                <p>
-                    La inteligencia artificial ayuda a explorar nuevas posibilidades.
-                </p>
+                <p>La inteligencia artificial ayuda a explorar nuevas posibilidades.</p>
 
                 <h4>NUEVO CONCEPTO</h4>
-
-                <p>
-                    La combinación puede abrir caminos que antes no habíamos imaginado.
-                </p>
-
+                <p>La combinación puede abrir caminos que antes no habíamos imaginado.</p>
             </div>
-
         </div>
 
         <div class="experimento-card">
-
             <span>02</span>
-
             <h3>Tecnología × Creatividad</h3>
-
-            <p>
-                ¿Cómo puede la tecnología convertir una idea en una nueva experiencia?
-            </p>
-
+            <p>¿Cómo puede la tecnología convertir una idea en una nueva experiencia?</p>
             <strong>→</strong>
-
         </div>
-
-
-      
 
         <div class="experimento-card">
-
             <span>03</span>
-
             <h3>IA × Proyectos</h3>
-
-            <p>
-                De una idea a un proyecto ¿hasta dónde puede llevarnos la inteligencia artificial?
-            </p>
-
+            <p>De una idea a un proyecto ¿hasta dónde puede llevarnos la inteligencia artificial?</p>
             <strong>→</strong>
-
         </div>
 
     </div>
 
-  <div class="experimento-conexiones-02">
+    <div class="experimento-conexiones-02">
 
-    <div class="conexao-linha linha-ideia"></div>
-    <div class="conexao-linha linha-tecnologia"></div>
-    <div class="conexao-linha linha-experiencia"></div>
+        <div class="conexao-linha linha-ideia"></div>
+        <div class="conexao-linha linha-tecnologia"></div>
+        <div class="conexao-linha linha-experiencia"></div>
 
-    <div class="conexao-node node-ideia">
-        <span>IDEA</span>
+        <div class="conexao-node node-ideia">
+            <span>IDEA</span>
+        </div>
+
+        <div class="conexao-node node-tecnologia">
+            <span>TECNOLOGÍA</span>
+        </div>
+
+        <div class="conexao-node node-experiencia">
+            <span>EXPERIENCIA</span>
+        </div>
+
     </div>
 
-    <div class="conexao-node node-tecnologia">
-        <span>TECNOLOGÍA</span>
-    </div>
-
-    <div class="conexao-node node-experiencia">
-        <span>EXPERIENCIA</span>
-    </div>
-
-  </div>
-
-
-   <div class="experimento-conceptos">
+    <div class="experimento-conceptos">
 
         <div class="concepto-card">
             <h4>EXPLORAR</h4>
-            <p>
-                Nuevas posibilidades aparecen cuando conectamos conocimiento, creatividad y tecnología.
-            </p>
+            <p>Nuevas posibilidades aparecen cuando conectamos conocimiento, creatividad y tecnología.</p>
         </div>
 
         <div class="concepto-card">
             <h4>TRANSFORMAR</h4>
-            <p>
-                Una idea puede convertirse en una experiencia, una herramienta o una nueva forma de hacer las cosas.
-            </p>
+            <p>Una idea puede convertirse en una experiencia, una herramienta o una nueva forma de hacer las cosas.</p>
         </div>
 
         <div class="concepto-card">
             <h4>CONSTRUIR</h4>
-            <p>
-                La inteligencia artificial puede llevarnos de una idea a un proyecto que imaginamos para 2050.
-            </p>
+            <p>La inteligencia artificial puede llevarnos de una idea a un proyecto que imaginamos para 2050.</p>
         </div>
 
-   </div>
-
-  
-
-      <div class="experimento-cierre">
-        <p>
-            Algunas ideas empiezan como un experimento. Otras terminan convirtiéndose en algo real.
-        </p>
-      </div>
+    </div>
 
 </section>
+
+
+<!-- ==================== EXPERIMENTO PT ==================== -->
+
+<section class="experimento experimento-pt">
+
+    <div class="experimento-etiqueta">
+        EXPERIMENTO
+    </div>
+
+    <div class="experimento-intro">
+        <h2>O que pode surgir quando conectamos dois mundos?</h2>
+        <p>Gastronomia • Tecnologia • Inteligência Artificial</p>
+    </div>
+
+    <div class="experimento-opciones">
+
+        <div class="experimento-card">
+            <span>01</span>
+            <h3>EXPLORAR</h3>
+            <p>Conectar → descobrir → criar</p>
+            <strong>→</strong>
+
+            <div class="experimento-detalle">
+                <h4>IDEIA HUMANA</h4>
+                <p>O que acontece quando a criatividade humana e a inteligência artificial trabalham juntas?</p>
+
+                <h4>+ IA</h4>
+                <p>A inteligência artificial ajuda a explorar novas possibilidades.</p>
+
+                <h4>NOVO CONCEITO</h4>
+                <p>A combinação pode abrir caminhos que antes não havíamos imaginado.</p>
+            </div>
+        </div>
+
+        <div class="experimento-card">
+            <span>02</span>
+            <h3>Tecnologia × Criatividade</h3>
+            <p>Como a tecnologia pode transformar uma ideia em uma nova experiência?</p>
+            <strong>→</strong>
+        </div>
+
+        <div class="experimento-card">
+            <span>03</span>
+            <h3>IA × Projetos</h3>
+            <p>De uma ideia a um projeto — até onde a inteligência artificial pode nos levar?</p>
+            <strong>→</strong>
+        </div>
+
+    </div>
+
+    <div class="experimento-conexiones-02">
+
+        <div class="conexao-linha linha-ideia"></div>
+        <div class="conexao-linha linha-tecnologia"></div>
+        <div class="conexao-linha linha-experiencia"></div>
+
+        <div class="conexao-node node-ideia">
+            <span>IDEIA</span>
+        </div>
+
+        <div class="conexao-node node-tecnologia">
+            <span>TECNOLOGIA</span>
+        </div>
+
+        <div class="conexao-node node-experiencia">
+            <span>EXPERIÊNCIA</span>
+        </div>
+
+    </div>
+
+    <div class="experimento-conceptos">
+
+        <div class="concepto-card">
+            <h4>EXPLORAR</h4>
+            <p>Novas possibilidades surgem quando conectamos conhecimento, criatividade e tecnologia.</p>
+        </div>
+
+        <div class="concepto-card">
+            <h4>TRANSFORMAR</h4>
+            <p>Uma ideia pode se transformar em uma experiência, uma ferramenta ou uma nova forma de fazer as coisas.</p>
+        </div>
+
+        <div class="concepto-card">
+            <h4>CONSTRUIR</h4>
+            <p>A inteligência artificial pode nos levar de uma ideia a um projeto que imaginamos para 2050.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+        
+    
 
 
 
@@ -2168,27 +2563,46 @@ Mi trabajo es hacer que sea memorable.
 </div>
 </>
 
-<h2 class="galeria-titulo">Galería</h2>
+<div class="galeria-experiencia" tabindex="0">
 
-<img src="sushi-roll.png" alt="Niguiri Nikkei" width="100%">
+    <div class="foto-experiencia foto-principal" tabindex="0">
+        <img src="sushi-roll.png" alt="Niguiri Nikkei">
+        <span>NIKKEI</span>
+    </div>
+
+    <div class="foto-experiencia" tabindex="0">
+        <img src="niguiri-nikkei.png" alt="Sushi Roll">
+        <span>NIGUIRI</span>
+    </div>
+
+    <div class="foto-experiencia" tabindex="0">
+        <img src="ceviche-amazonico.jpg" alt="Ceviche amazónico">
+        <span>AMAZÓNICO</span>
+    </div>
+
+    <div class="foto-experiencia foto-principal" tabindex="0">
+        <img src="causa.jpg" alt="Causa peruana">
+        <span>PERÚ</span>
+    </div>
+
+    <div class="foto-experiencia" tabindex="0">
+        <img src="arroz-mariscos.jpg" alt="Arroz con mariscos">
+        <span>MAR</span>
+    </div>
+
+    <div class="foto-experiencia" tabindex="0">
+        <img src="arroz-chaufa.jpg" alt="Arroz chaufa">
+        <span>CHAUFA</span>
+    </div>
+
+    <div class="foto-experiencia foto-final" tabindex="0">
+        <img src="tiradito-nikkei.jpg" alt="Tiradito Nikkei">
+        <span>TIRADITO</span>
+    </div>
+
+</div>
 
 
-
-<img src="niguiri-nikkei.png" alt="Sushi Roll" width="100%">
-
-<img src="ceviche-amazonico.jpg" alt="Ceviche amazonico" width="100%">
-
-<img src="causa.jpg" alt="causa peruana" width="100%">
-
-<img src="arroz-mariscos.jpg" alt="Arroz con Mariscos" width="100%">
-
-<img src="arroz-chaufa.jpg" class="galeria-ajustada">
-
-<img src="tiradito-nikkei.jpg" class="galeria-ajustada">
-
-<p class="texto-galeria">
-Una selección de platos y creaciones que reflejan mi forma de entender la gastronomía: equilibrio, creatividad y atención a los detalles.
-</p>
 
 <section class="beyond-kitchen texto-arriba">
 <h2
@@ -2659,3 +3073,5 @@ experimentoCards.forEach(function(card) {
   
   
 </script>
+
+  
